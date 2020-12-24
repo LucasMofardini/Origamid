@@ -106,3 +106,72 @@ var custoDoCarro = function(portas){
 }
 console.log(custoDoCarro(4));
 console.log(custoDoCarro());
+
+var clientes = ['Andre', 'Rafael', 'Lucas','José', 'Joao', 'Marcos'];
+var totalArray = clientes.length;
+for(var i = 0; i < totalArray; i++){
+    console.log(clientes[i]);
+    if(clientes[i] == 'Lucas'){    
+        console.log('Chegou no Lucas');
+    }
+}
+
+var o =  0;
+while(o<10){
+    console.log(o);
+      o++;
+      }
+
+
+var numero = 0, maximo = 20;
+
+for(;numero < maximo;){
+    
+    console.log(numero);
+    numero+= 5;
+}
+
+var lucas = {
+    nome : "Lucas",
+    profissao: "Desenvolvedor",
+    idade: 18    
+}
+console.log(lucas.nome);
+
+var quadrado = {
+    totalLados: 4,
+    area: function(lado){
+        return lado * lado;
+    },
+    perimetro: function(){
+        return lado * this.totalLados;
+    }
+}
+console.log(quadrado.area(10));
+
+var pi = Math.PI;
+
+console.log(pi);
+
+var pessoa = {
+    nome : 'Lucas',
+    idade: '18',
+    agradecer: function(){
+        return "obrigado " + this.nome;
+    }
+}
+console.log(typeof pessoa);
+
+var carro = {
+    modelo: 'Audi',
+    portas: 4,
+    
+}
+carro.portas = 20;
+carro.cor = "Branco"
+carro.mala = function(){
+    return "abrir mala";
+}
+var portas = carro.portas;
+console.log(portas);
+console.log(carro.mala());
