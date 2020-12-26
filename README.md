@@ -1,6 +1,6 @@
 # Origamid
 
-## FlexBox
+## *FlexBox*
 
 ```
 Este curso sobre flexbox me ajudou a melhorar a maneira que eu formato
