@@ -1,5 +1,6 @@
 # <center> Origamid </center>
 
+<center>Centered text</center>
 ## **FlexBox**
 
 ```
