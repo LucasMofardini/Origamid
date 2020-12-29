@@ -17,7 +17,7 @@ $('p').append(' <span>HOLAA</span>');
 //Se voce passa sem nenhum parametro ele serve como GET do valor. Pega apenas o primeiro valor
 console.log($('h1').html());
 //Se voce passa com   alguma coisa dentro ele subistitui
-$( "button" ).html( "Next Step..." );
+
 
 // APPEND ADICIONA CONTEUDO | HTML SUBISTITUI
 
@@ -48,9 +48,9 @@ $('p').click(function(){
 });
 
 // ou
-$('li').on('click', function(){
-  $('button').text('DAORA');
-});
+// $('li').on('click', function(){
+//   $('button').text('DAORA');
+// });
 // Esse preventDefault(); voce anula o que o objeto a iria fazer e deixa o que a funçao vai fazer
 // $('a').click(function(e){
 //   e.preventDefault();
@@ -58,9 +58,9 @@ $('li').on('click', function(){
 // });]
 
 //Um hover que nao muda, instantaneo
-$('li').on('mouseenter', function(){
-  $('button').text('DAORA');
-});
+// $('li').on('mouseenter', function(){
+//   $('button').text('DAORA');
+// });
 //ex de tirar e colocar o hover
 
 // $('a').mouseenter(function(e){
@@ -80,3 +80,13 @@ $('li').on('mouseenter', function(){
 //   $('a').text($('body').width());
 // });
 //
+
+$('.abrir-modal').on('click',function(){
+  $('.modal').toggleClass('active');
+  var condicao = $('.modal').hasClass('active');
+  if(condicao){
+    $(this).text('Fechar Modal');
+  }else{
+  $(this).text('Abrir Modal');
+  }
+});

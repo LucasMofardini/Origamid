@@ -9,7 +9,13 @@
     <h3>TESTE 1</h3>
   <p id="paragrafo">Meu nome é Lucas</p>
   <p id="segundo">Segundo paragrafo</p>
-  <button type="button" name="button">CLIQUE AQUi</button>
+  <button type="button" class="abrir-modal" name="button">Abrir</button>
+
+  <div class="modal">
+  <h1>Modalzinho</h1>
+  <p>Algumas coisas escritas importantes</p>
+  <button type="button" name="button">Clique AQUI</button>
+  </div>
   <h1>LUCAS</h1>
 <ul>
   <li>
@@ -28,3 +34,20 @@
   </body>
  <p>aaa</p>
 </html>
+<style media="screen">
+  .modal{
+    max-width: 300px;
+    margin: 10px auto;
+    text-align: center;
+    padding:20px 0;
+    visibility: hidden;
+    opacity: 0;
+
+  }
+
+  .active{
+    visibility: visible;
+    opacity: 1;
+    display: block;
+  }
+</style>
