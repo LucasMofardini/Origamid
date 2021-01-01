@@ -116,3 +116,49 @@ $('select').remove();
 //Tira todos os filhos do elemento, mas mantem o Pai
 $('section').empty()
 //tudo que está dentro do section será removido mas ele não vai ser
+
+//Funções de estilo
+
+//pega algum elemento css e voce consegue mudar
+$('span').css('font-size','1.3em');
+//varios valores de propriedades
+  $('span').css({
+    'background-color': 'blue',
+    'color': 'white',
+
+  });
+
+//Pega o tamanho do width
+var tamanhoBtn = $('button').width();
+console.log(tamanhoBtn);
+
+var windowHeight = $(window).height();
+console.log(windowHeight);
+
+//offset retorna top e left
+var offset = $('button').offset(),
+    offsetTop = offset.top,
+    offsetLeft = offset.left;
+console.log(offset);
+console.log(offsetTop);
+console.log(offsetLeft);
+
+//Setar um offset para algum elemento
+//Assume um position relative para ficar 20 ao topo e 10 a esqueda
+
+// $('button').offset({
+//   top:20,
+//   left:10
+// });
+
+//Scroll top é o scroll em relação  ao topo da página
+
+// $(window).scroll(function(){
+//   var scrollTop = $(this).scrollTop();
+//   console.log(scrollTop);
+// });
+
+$('#btn-teste').on('click', function(e){
+  e.preventDefault();
+  $(window).scrollTop(0);
+});
