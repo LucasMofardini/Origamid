@@ -90,3 +90,29 @@ $('.abrir-modal').on('click',function(){
   $(this).text('Abrir Modal');
   }
 });
+
+//pega ou define o valor
+//ex: está pegando o valor do href do primeiro a
+var href = $('a').attr('href');
+var clas = $('a').attr('class');
+var id = $('a').attr('id');
+console.log(href);
+console.log(clas);
+console.log(id);
+//remove o atributo
+$('a').attr('href');
+
+//pega ou define o valor do elemento
+//ultilizado em input, select e text area;
+$('#btn-teste').on('click', function(){
+  var nome = $('.nome').val();
+  $('.mostrar').text(nome);
+});
+
+//Remover um elemento do DOM ( documento )
+$('select').remove();
+
+
+//Tira todos os filhos do elemento, mas mantem o Pai
+$('section').empty()
+//tudo que está dentro do section será removido mas ele não vai ser
