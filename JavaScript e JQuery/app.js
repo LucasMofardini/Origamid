@@ -162,3 +162,17 @@ $('#btn-teste').on('click', function(e){
   e.preventDefault();
   $(window).scrollTop(0);
 });
+
+//Pega todos os elementos que tem a classe
+// $('a').each();
+
+//Animar para aparecer itens na página
+// $(window).scroll(function(){
+//   var scrollTop = $(this).scrollTop();
+//   console.log(scrollTop);
+//   $('.anime').each(function(){
+//     if(scrollTop > $(this).offset().top - 400){
+//       $(this).addClass('inicia');
+//     }
+//   });
+// });
