@@ -35,7 +35,7 @@
   <button type="button" name="button" class="abrir">Abrir</button>
     <div class="content">
         <input type="text" name="" value="">
-        <button type="button" name="button">clique aqui</button>
+        <button type="button" name="button" class="clique">clique aqui</button>
         <ul>
           <li><a href="#">Home</a></li>
           <li><a href="#">Conteudo</a></li>
@@ -67,9 +67,60 @@
   }
   body{
   height: 1000px;
+  margin:0;
+  padding: 0;
   }
   .dropdown{
     margin: 0 auto;
     max-width: 400px;
+    /* background-color: aqua; */
+    text-align: center;
+
+  }
+  .abrir{
+    width: 100%;
+    border: none;
+    outline-color: none;
+    box-shadow: none;
+    background-color: tomato;
+    height: 50px;
+    cursor: pointer;
+    color: white;
+  }
+  .content{
+  width: 100%;
+  background-color: #262626;
+  transform-origin: top;
+  transform: perspective(1000px) rotatex(-90deg);
+  transition:0.5s;
+  }
+  .content.ativo{
+    transform: perspective(1000px) rotatex(0);
+
+  }
+  .content input[type=text]{
+    width: 98%;
+  }
+  .content .clique{
+    width: 100%;
+    height: 40px;
+  }
+  .dropdown ul{
+    margin:0;
+    padding: 0;
+  }
+  .dropdown ul li{
+    list-style: none;
+    padding: 10px 0;
+    border-bottom:1px solid rgba(0,0,0,0.1);
+
+  }
+    .dropdown ul li:hover{
+        background: #0d7ad0;
+        transition: 0.3s;
+    }
+  .dropdown  ul li a{
+    text-decoration: none;
+    color: white;
   }
 </style>
