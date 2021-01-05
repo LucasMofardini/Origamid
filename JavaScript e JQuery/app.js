@@ -162,7 +162,9 @@ $('#btn-teste').on('click', function(e){
   e.preventDefault();
   $(window).scrollTop(0);
 });
-
+$( "p" ).each(function(a) {
+  console.log( a + ": " + $( this ).text() );
+});
 //Pega todos os elementos que tem a classe
 // $('a').each();
 
