@@ -185,7 +185,50 @@ $('.abrir').on('click',function(){
 
 //Animar
 $('.btnaa').on('click', function(){
+  console.log('a');
   $('.aa').animate({
-    opacity: 0,
+    opacity: 0.5,
   },1000);
+});
+
+//fadeIn e fadeOut
+
+// $('.btnaa').click(function(){
+//   $('.modal').fadeOut();
+// });
+
+//Show mostra
+
+// $('.btnaa').click(function(){
+//   $('.modal').Show();
+// });
+//Hide tira tambem o width e height
+
+// $('.btnaa').click(function(){
+//   $('.modal').Hide();
+// });
+
+//Slide Up // aparecer
+// $('.btnaa').click(function(){
+//   $('.modal').slideUp(1000);
+// });
+
+//Slide Down // desaparece
+
+// $('.btnaa').click(function(){
+//   $('.modal').SlideDown(1000);
+// });
+
+//Igual slide down e slide up // Com toggleClass
+
+// $('.btnaa').click(function(){
+//   $('.lucas').slideToggle();
+// });
+
+//Slide toggle  realiza a função depois da animação
+
+$('.btnaa').click(function(){
+  $('.lucas').slideToggle(function(){
+    $('.btnaa').click();
+  });
 });
