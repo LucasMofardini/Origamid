@@ -182,3 +182,10 @@ $('.abrir').on('click',function(){
   $('.content').toggleClass('ativo');
   console.log('Ok');
 });
+
+//Animar
+$('.btnaa').on('click', function(){
+  $('.aa').animate({
+    opacity: 0,
+  },1000);
+});
