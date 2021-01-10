@@ -3,8 +3,8 @@
 // $('ul li a , ul li').Hide();
 // $('a[href^="#"]').hide();
 // var $paragrafo = $('#paragrafo');
-if($('p').length){
-  console.log("paragrafo existe");
+if ($('p').length) {
+    console.log("paragrafo existe");
 }
 console.log($('p').length);
 
@@ -43,8 +43,8 @@ $('p').unwrap();
 
 // EVENTOS BASICOS
 
-$('p').click(function(){
-  $('p').text('LUUCAS');
+$('p').click(function() {
+    $('p').text('LUUCAS');
 });
 
 // ou
@@ -81,14 +81,14 @@ $('p').click(function(){
 // });
 //
 
-$('.abrir-modal').on('click',function(){
-  $('.modal').toggleClass('active');
-  var condicao = $('.modal').hasClass('active');
-  if(condicao){
-    $(this).text('Fechar Modal');
-  }else{
-  $(this).text('Abrir Modal');
-  }
+$('.abrir-modal').on('click', function() {
+    $('.modal').toggleClass('active');
+    var condicao = $('.modal').hasClass('active');
+    if (condicao) {
+        $(this).text('Fechar Modal');
+    } else {
+        $(this).text('Abrir Modal');
+    }
 });
 
 //pega ou define o valor
@@ -104,9 +104,9 @@ $('a').attr('href');
 
 //pega ou define o valor do elemento
 //ultilizado em input, select e text area;
-$('#btn-teste').on('click', function(){
-  var nome = $('.nome').val();
-  $('.mostrar').text(nome);
+$('#btn-teste').on('click', function() {
+    var nome = $('.nome').val();
+    $('.mostrar').text(nome);
 });
 
 //Remover um elemento do DOM ( documento )
@@ -115,18 +115,18 @@ $('select').remove();
 
 //Tira todos os filhos do elemento, mas mantem o Pai
 $('section').empty()
-//tudo que está dentro do section será removido mas ele não vai ser
+    //tudo que está dentro do section será removido mas ele não vai ser
 
 //Funções de estilo
 
 //pega algum elemento css e voce consegue mudar
-$('span').css('font-size','1.3em');
+$('span').css('font-size', '1.3em');
 //varios valores de propriedades
-  $('span').css({
+$('span').css({
     'background-color': 'blue',
     'color': 'white',
 
-  });
+});
 
 //Pega o tamanho do width
 var tamanhoBtn = $('button').width();
@@ -158,12 +158,12 @@ console.log(offsetLeft);
 //   console.log(scrollTop);
 // });
 
-$('#btn-teste').on('click', function(e){
-  e.preventDefault();
-  $(window).scrollTop(0);
+$('#btn-teste').on('click', function(e) {
+    e.preventDefault();
+    $(window).scrollTop(0);
 });
-$( "p" ).each(function(a) {
-  console.log( a + ": " + $( this ).text() );
+$("p").each(function(a) {
+    console.log(a + ": " + $(this).text());
 });
 //Pega todos os elementos que tem a classe
 // $('a').each();
@@ -178,17 +178,17 @@ $( "p" ).each(function(a) {
 //     }
 //   });
 // });
-$('.abrir').on('click',function(){
-  $('.content').toggleClass('ativo');
-  console.log('Ok');
+$('.abrir').on('click', function() {
+    $('.content').toggleClass('ativo');
+    console.log('Ok');
 });
 
 //Animar
-$('.btnaa').on('click', function(){
-  console.log('a');
-  $('.aa').animate({
-    opacity: 0.5,
-  },1000);
+$('.btnaa').on('click', function() {
+    console.log('a');
+    $('.aa').animate({
+        opacity: 0.5,
+    }, 1000);
 });
 
 //fadeIn e fadeOut
@@ -227,8 +227,48 @@ $('.btnaa').on('click', function(){
 
 //Slide toggle  realiza a função depois da animação
 
-$('.btnaa').click(function(){
-  $('.lucas').slideToggle(function(){
-    $('.btnaa').click();
-  });
+$('.btnaa').click(function() {
+    $('.lucas').slideToggle(function() {
+        $('.btnaa').click();
+    });
 });
+
+//seleciona todos os As e faz a funçao em cada um 
+$('a').each(function() {
+    $(this).click(function(e) {
+        e.preventDefault();
+        $(this).css('background', 'blue');
+    });
+});
+
+//procura o parente mais proximo
+//vai no p e procura a div mais proxima 
+$('p').closest('div').css('background', 'tomato');
+
+//Procura o primeiro Pai 
+$('p').parent().css('background', 'tomato');
+console.log($('p').parent());
+
+//procura dentro dos filhos
+$('div').click(function() {
+    $(this).find('p').css('background', 'blue');
+
+});
+//seleciona apenas o primeiro
+$('button').first().css('background', 'blue');
+
+//last pega apenas o ultimo
+
+$('button').last().css('background', 'blue');
+
+//seleciona o elemento anterior
+$('button').prev().css('background', 'pink');
+
+//seleciona o proximo
+$('button').next().css('color', 'pink');
+
+//seleciona pelo Index dele
+//esse tras o elemento, nao o objeto
+console.log($('button')[0]);
+// $('p')[1].css('background','purple'); Não funciona pois seleciona o elemento
+$('p').eq(1).css('background', 'purple'); // funciona pois seleciona o objeto
