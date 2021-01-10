@@ -272,3 +272,22 @@ $('button').next().css('color', 'pink');
 console.log($('button')[0]);
 // $('p')[1].css('background','purple'); Não funciona pois seleciona o elemento
 $('p').eq(1).css('background', 'purple'); // funciona pois seleciona o objeto
+
+
+//Verifica se o js vai funcionar depois do Documento
+$(document).ready(function() {});
+
+//Pega o valor que esta dentro dele
+var a = $('.modal').data('lucas');
+console.log(a);
+$('a').data('eu', 'rapido');
+console.log($('a').data());
+
+//faz algo depois de um determinado tempo
+setTimeout(function() {
+    $('button').css('background', 'blue');
+}, 1000);
+
+setTimeout(function() {
+    $('button').css('background', 'green');
+}, 2000);

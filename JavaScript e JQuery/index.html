@@ -1,144 +1,156 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-  </head>
-  <body>
+</head>
+
+<body>
     <h3>TESTE 1</h3>
-  <p id="paragrafo">Meu nome é Lucas</p>
-  <p id="segundo">Segundo paragrafo</p>
-  <button type="button" class="abrir-modal" name="button">Abrir</button>
+    <p id="paragrafo">Meu nome é Lucas</p>
+    <p id="segundo">Segundo paragrafo</p>
+    <button type="button" class="abrir-modal" name="button">Abrir</button>
 
-  <div class="modal active">
-  <h1>Modalzinho</h1>
-  <p>Algumas coisas escritas importantes</p>
-  <button type="button" id="btn-teste" name="button">ENVIAR</button>
-  <input class="nome" type="text" name="" value="">
-  <span class="mostrar">Vai mostrar</span>
-  </div>
-  <h1>LUCAS</h1>
-<ul>
-  <li>
-    <a href="#link1">Link1</a>
-  </li>
-  <li>
-    <a href="#link2">Link2</a>
-  </li>
-  <li>
-    <a href="#link3">Link3</a>
-  </li>
-</ul>
-
-<div class="dropdown">
-  <button type="button" name="button" class="abrir">Abrir</button>
-    <div class="content">
-        <input type="text" name="" value="">
-        <button type="button" name="button" class="clique">clique aqui</button>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Conteudo</a></li>
-          <li><a href="#">Sobre</a></li>
-        </ul>
+    <div class="modal active" data-lucas="1000">
+        <h1>Modalzinho</h1>
+        <p>Algumas coisas escritas importantes</p>
+        <button type="button" id="btn-teste" name="button">ENVIAR</button>
+        <input class="nome" type="text" name="" value="">
+        <span class="mostrar">Vai mostrar</span>
     </div>
-</div>
-<div class="aa">
-    <button type="button" name="button"  class="btnaa">Clica</button>
-</div>
-  <p class="lucas"> LUCAAAAAAAAAAAAAAAAAAAAAAAAAAS </p>
-  <script src="jquery-3.5.1.min.js"></script>
-  <script src="app.js"></script>
-  <!-- <script src="script.js"></script> -->
-  </body>
- <p>aaa</p>
+    <h1>LUCAS</h1>
+    <ul>
+        <li>
+            <a href="#link1">Link1</a>
+        </li>
+        <li>
+            <a href="#link2">Link2</a>
+        </li>
+        <li>
+            <a href="#link3">Link3</a>
+        </li>
+    </ul>
+
+    <div class="dropdown">
+        <button type="button" name="button" class="abrir">Abrir</button>
+        <div class="content">
+            <input type="text" name="" value="">
+            <button type="button" name="button" class="clique">clique aqui</button>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Conteudo</a></li>
+                <li><a href="#">Sobre</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="aa">
+        <button type="button" name="button" class="btnaa">Clica</button>
+    </div>
+    <p class="lucas"> LUCAAAAAAAAAAAAAAAAAAAAAAAAAAS </p>
+    <script src="jquery-3.5.1.min.js"></script>
+    <script src="app.js"></script>
+    <!-- <script src="script.js"></script> -->
+</body>
+<p>aaa</p>
+
 </html>
 <style media="screen">
-.aa{
-  background-color: blue;
-  max-width: 500px;
-  margin: 20px auto;
-  height: 100px;
-  text-align: center;
-}
-.aa button{
-  width: 100%;
-  border-radius: 0;
-  border: 1px gray solid;
-  background-color: white;
-}
-  .modal{
-    max-width: 300px;
-    margin: 10px auto;
-    text-align: center;
-    padding:20px 0;
-    visibility: hidden;
-    opacity: 0;
-    background-color: tomato
-
-  }
-
-  .active{
-    visibility: visible;
-    opacity: 1;
-    display: block;
-  }
-  body{
-  height: 1000px;
-  margin:0;
-  padding: 0;
-  }
-  .dropdown{
-    margin: 0 auto;
-    max-width: 400px;
-    /* background-color: aqua; */
-    text-align: center;
-
-  }
-  .abrir{
-    width: 100%;
-    border: none;
-    outline-color: none;
-    box-shadow: none;
-    background-color: tomato;
-    height: 50px;
-    cursor: pointer;
-    color: white;
-  }
-  .content{
-  width: 100%;
-  background-color: #262626;
-  transform-origin: top;
-  transform: perspective(1000px) rotatex(-90deg);
-  transition:0.5s;
-  }
-  .content.ativo{
-    transform: perspective(1000px) rotatex(0);
-
-  }
-  .content input[type=text]{
-    width: 98%;
-  }
-  .content .clique{
-    width: 100%;
-    height: 40px;
-  }
-  .dropdown ul{
-    margin:0;
-    padding: 0;
-  }
-  .dropdown ul li{
-    list-style: none;
-    padding: 10px 0;
-    border-bottom:1px solid rgba(0,0,0,0.1);
-
-  }
-    .dropdown ul li:hover{
+    .aa {
+        background-color: blue;
+        max-width: 500px;
+        margin: 20px auto;
+        height: 100px;
+        text-align: center;
+    }
+    
+    .aa button {
+        width: 100%;
+        border-radius: 0;
+        border: 1px gray solid;
+        background-color: white;
+    }
+    
+    .modal {
+        max-width: 300px;
+        margin: 10px auto;
+        text-align: center;
+        padding: 20px 0;
+        visibility: hidden;
+        opacity: 0;
+        background-color: tomato
+    }
+    
+    .active {
+        visibility: visible;
+        opacity: 1;
+        display: block;
+    }
+    
+    body {
+        height: 1000px;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .dropdown {
+        margin: 0 auto;
+        max-width: 400px;
+        /* background-color: aqua; */
+        text-align: center;
+    }
+    
+    .abrir {
+        width: 100%;
+        border: none;
+        outline-color: none;
+        box-shadow: none;
+        background-color: tomato;
+        height: 50px;
+        cursor: pointer;
+        color: white;
+    }
+    
+    .content {
+        width: 100%;
+        background-color: #262626;
+        transform-origin: top;
+        transform: perspective(1000px) rotatex(-90deg);
+        transition: 0.5s;
+    }
+    
+    .content.ativo {
+        transform: perspective(1000px) rotatex(0);
+    }
+    
+    .content input[type=text] {
+        width: 98%;
+    }
+    
+    .content .clique {
+        width: 100%;
+        height: 40px;
+    }
+    
+    .dropdown ul {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .dropdown ul li {
+        list-style: none;
+        padding: 10px 0;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+    
+    .dropdown ul li:hover {
         background: #0d7ad0;
         transition: 0.3s;
     }
-  .dropdown  ul li a{
-    text-decoration: none;
-    color: white;
-  }
+    
+    .dropdown ul li a {
+        text-decoration: none;
+        color: white;
+    }
 </style>
