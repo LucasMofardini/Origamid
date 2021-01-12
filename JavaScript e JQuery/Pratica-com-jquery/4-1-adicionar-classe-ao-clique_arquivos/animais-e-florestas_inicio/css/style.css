@@ -128,15 +128,22 @@ img {
 }
 
 
-.item{
+.js.item{
 	opacity: 0;
 	visibility: hidden;
-	display: none;
+	transform: translate3d(0,-50px,0);
+	/* para nao usar o display none */
 
+	position:absolute;
+	top: 0;
 }
-.item.active{
+.js.item.active{
 	opacity: 1;
 	visibility: visible;
+	transform: translate3d(0,0,0);
+	/* pra nao usar o display */
+	position: relative;
+	top: auto;
 	display: block;
-	transition: 0.3s;
+	transition: 0.5s;
 }
