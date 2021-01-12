@@ -126,3 +126,17 @@ img {
 	width: 50%;
 	float: left;
 }
+
+
+.item{
+	opacity: 0;
+	visibility: hidden;
+	display: none;
+
+}
+.item.active{
+	opacity: 1;
+	visibility: visible;
+	display: block;
+	transition: 0.3s;
+}
