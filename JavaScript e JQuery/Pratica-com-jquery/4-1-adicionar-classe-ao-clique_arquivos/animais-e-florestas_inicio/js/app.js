@@ -26,6 +26,9 @@
 //         $(itemID).addClass('active');
 //     });
 // });
+
+
+//Qualquer outra seção é só colocar o data-click e o data-target
 $('[data-group]').each(function(){
     var $allTarget = $(this).find('[data-target]'),
     $allClick = $(this).find('[data-click]'),

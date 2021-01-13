@@ -28,11 +28,7 @@ ul li a {
 	text-transform: uppercase;
 	letter-spacing: 2px;
 }
-ul li a.active{
-	background: #56CC9D;
-	color: white;
-	border-color: #56CC9D;
-}
+
 h1, h2, h3 {
 	font-family: 'Playfair Display';
 	font-weight: 900;
@@ -128,7 +124,7 @@ img {
 }
 
 
-.js .item{
+[data-target]{
 	opacity: 0;
 	visibility: hidden;
 	transform: translate3d(0,-50px,0);
@@ -137,7 +133,13 @@ img {
 	position:absolute;
 	top: 0;
 }
-.js .item.active{
+/* Botão ativo */
+[data-click].active{
+	background: #56CC9D;
+	color: white;
+	border-color: #56CC9D;
+}
+[data-target].active{
 	opacity: 1;
 	visibility: visible;
 	transform: translate3d(0,0,0);
