@@ -28,6 +28,25 @@
 // });
 $('[data-group]').each(function(){
     var $allTarget = $(this).find('[data-target]'),
-    $allClick = $(this).find('[data-click]');
-    console.log($allTarget);
+    $allClick = $(this).find('[data-click]'),
+    activeClass = 'active';
+    //deixando habilitado o target da classe e o btn do click
+    $allTarget.first().addClass(activeClass);
+    $allClick.first().addClass(activeClass);
+
+    //botao clicado
+    $allClick.click(function(e){
+      e.preventDefault();
+      //valor do data-click
+      var id = $(this).data('click');
+      var $target = $('[data-target="' + id +'"]');
+
+      $allClick.removeClass(activeClass);
+      $allTarget.removeClass(activeClass);
+
+      $target.addClass(activeClass);
+      //this = botao
+      $(this).addClass(activeClass);
+    });
+
 });
