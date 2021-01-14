@@ -22,13 +22,23 @@ $('[data-group]').each(function(){
 });
 
 //Scroll suave
-$('.menu-nav a').click(function(e){
+//^= todos os itens que começam com #
+$('.menu-nav a[href^="#"]').click(function(e){
 	e.preventDefault();
 	var id = $(this).attr('href');
+	//tamanho do menu
+	var tamanhoMenu = $('.menu').innerHeight();
 	var targetOffset = $(id).offset().top;
 	console.log(targetOffset);
 
 	$('html, body').animate({
-		scrollTop:targetOffset
+		scrollTop:targetOffset - tamanhoMenu
 	},500);
+});
+//clicar no logo e voltar para o inicio
+$('.logo').click(function(e){
+		e.preventDefault();
+		$('html, body').animate({
+			scrollTop : 0
+		}, 500);
 });
