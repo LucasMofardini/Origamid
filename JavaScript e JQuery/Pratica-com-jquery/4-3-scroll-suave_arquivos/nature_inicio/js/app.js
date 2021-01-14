@@ -22,6 +22,9 @@ $('[data-group]').each(function(){
 });
 
 //Scroll suave
-$('.menu-nav a').click(function(){
-
+$('.menu-nav a').click(function(e){
+	e.preventDefault();
+	var id = $(this).attr('href');
+	var targetOffset = $(id).offset().top;
+	console.log(targetOffset);
 });
