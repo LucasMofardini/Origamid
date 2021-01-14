@@ -27,4 +27,8 @@ $('.menu-nav a').click(function(e){
 	var id = $(this).attr('href');
 	var targetOffset = $(id).offset().top;
 	console.log(targetOffset);
+
+	$('html, body').animate({
+		scrollTop:targetOffset
+	},500);
 });
