@@ -6,7 +6,12 @@
 	max-width: 900px;
 	margin: 0 auto;
 }
-
+body{
+	background-image: url(https://images4.alphacoders.com/936/936378.jpg);
+	background-repeat: no-repeat;
+	width: 100%;
+	
+}
 ul {
 	text-align: center;
 	margin: 80px 0 40px 0;
