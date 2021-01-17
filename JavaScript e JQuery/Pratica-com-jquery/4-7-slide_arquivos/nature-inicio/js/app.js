@@ -64,17 +64,29 @@ $('.mobile-btn').click(function() {
 });
 
 //deixa ativo o primeiro slide
-$('.slide > :first').addClass('active');
+function slider(SliderName) {
+    var sliderClass = '.' + SliderName;
+    var activeClass = 'active';
+    var rotate = setInterval(rotateSlide, 500);
+    $(sliderClass + ' > :first').addClass(activeClass);
 
-function rotateSlide() {
-    var activeSlide = $('.slide > .active'),
-        nextSlide = activeSlide.next();
-    //pega o tamanho do proximo slide e se for igual a zero, atribui o primeiro slide para o proximo
-    if (nextSlide.length == 0) {
-        nextSlide = $('.slide > :first');
+    $(sliderClass).hover(function() {
+        clearInterval(rotate);
+    }, function() {
+        rotate = setInterval(rotateSlide, 500);
+    });
+
+    function rotateSlide() {
+        var activeSlide = $(sliderClass + ' > .active'),
+            nextSlide = activeSlide.next();
+        //pega o tamanho do proximo slide e se for igual a zero, atribui o primeiro slide para o proximo
+        if (nextSlide.length == 0) {
+            nextSlide = $(sliderClass + ' > :first');
+        }
+        activeSlide.removeClass(activeClass);
+        nextSlide.addClass(activeClass);
     }
-    activeSlide.removeClass('active');
-    nextSlide.addClass('active');
-}
 
-setInterval(rotateSlide, 500);
+
+}
+slider('introdução');
