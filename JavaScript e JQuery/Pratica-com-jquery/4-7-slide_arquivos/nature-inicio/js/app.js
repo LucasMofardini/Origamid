@@ -1,3 +1,4 @@
+//mudar tab ao click
 $('[data-group]').each(function() {
     var $allTarget = $(this).find('[data-target]'),
         $allClick = $(this).find('[data-click]'),
@@ -20,6 +21,7 @@ $('[data-group]').each(function() {
     });
 });
 
+//scroll suave link interno
 $('.menu-nav a[href^="#"]').click(function(e) {
     e.preventDefault();
     var id = $(this).attr('href'),
@@ -29,6 +31,7 @@ $('.menu-nav a[href^="#"]').click(function(e) {
         scrollTop: targetOffset - menuHeight
     }, 500);
 });
+//scroll suave logo pro topo
 
 $('.logo').click(function(e) {
     e.preventDefault();
@@ -36,7 +39,7 @@ $('.logo').click(function(e) {
         scrollTop: 0
     }, 500)
 });
-
+//mudar pra active conforme a area
 $('section').each(function() {
     var height = $(this).height(),
         offsetTop = $(this).offset().top,
