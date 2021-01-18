@@ -1,3 +1,19 @@
+//debouce do lodash
+debounce = function(func, wait, immediate) {
+    var timeout;
+    return function() {
+        var context = this,
+            args = arguments;
+        var later = function() {
+            timeout = null;
+            if (!immediate) func.apply(context, args);
+        };
+        var callNow = immediate && !timeout;
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+        if (callNow) func.apply(context, args);
+    };
+};
 // Mudar tab ao click
 $('[data-group]').each(function() {
     var $allTarget = $(this).find('[data-target]'),
@@ -48,14 +64,14 @@ $('section').each(function() {
         id = $(this).attr('id'),
         $itemMenu = $('a[href="#' + id + '"]');
 
-    $(window).scroll(function() {
+    $(window).scroll(debouce(function() {
         var scrollTop = $(window).scrollTop();
         if (offsetTop - menuHeight < scrollTop && offsetTop + height - menuHeight > scrollTop) {
             $itemMenu.addClass('active');
         } else {
             $itemMenu.removeClass('active');
         }
-    });
+    }, 200));
 });
 
 // Botão do menu mobile
@@ -65,52 +81,54 @@ $('.mobile-btn').click(function() {
 });
 
 // Slider
-function slider(sliderName, velocidade) {
-    var sliderClass = '.' + sliderName,
-        activeClass = 'active',
-        rotate = setInterval(rotateSlide, velocidade);
+(function() {
+    function slider(sliderName, velocidade) {
+        var sliderClass = '.' + sliderName,
+            activeClass = 'active',
+            rotate = setInterval(rotateSlide, velocidade);
 
-    $(sliderClass + ' > :first').addClass(activeClass);
+        $(sliderClass + ' > :first').addClass(activeClass);
 
-    $(sliderClass).hover(function() {
-        clearInterval(rotate);
-    }, function() {
-        rotate = setInterval(rotateSlide, velocidade);
-    });
+        $(sliderClass).hover(function() {
+            clearInterval(rotate);
+        }, function() {
+            rotate = setInterval(rotateSlide, velocidade);
+        });
 
-    function rotateSlide() {
-        var activeSlide = $(sliderClass + ' > .' + activeClass),
-            nextSlide = activeSlide.next();
+        function rotateSlide() {
+            var activeSlide = $(sliderClass + ' > .' + activeClass),
+                nextSlide = activeSlide.next();
 
-        if (nextSlide.length == 0) {
-            nextSlide = $(sliderClass + ' > :first');
+            if (nextSlide.length == 0) {
+                nextSlide = $(sliderClass + ' > :first');
+            }
+            activeSlide.removeClass(activeClass);
+            nextSlide.addClass(activeClass);
         }
-        activeSlide.removeClass(activeClass);
-        nextSlide.addClass(activeClass);
     }
-}
 
-slider('introducao', 2000);
+    slider('introducao', 2000);
+})();
+(function() {
+    //animate scroll
+    var $target = $('[data-anime="scroll"]');
+    var animationClass = 'animate';
+    var offset = $(window).height() * 3 / 4;
 
+    function animeScroll() {
+        var documentTop = $(window).scrollTop();
+        $target.each(function() {
+            var itemTop = $(this).offset().top;
+            if (documentTop > itemTop - offset) {
+                $(this).addClass(animationClass);
+            } else {
+                $(this).removeClass(animationClass);
 
-//animate scroll
-var $target = $('[data-anime="scroll"]');
-var animationClass = 'animate';
-var offset = $(window).height() * 3 / 4;
-
-function animeScroll() {
-    var documentTop = $(window).scrollTop();
-    $target.each(function() {
-        var itemTop = $(this).offset().top;
-        if (documentTop > itemTop - offset) {
-            $(this).addClass(animationClass);
-        } else {
-            $(this).removeClass(animationClass);
-
-        }
-    });
-}
-animeScroll();
-$(document).scroll(function() {
+            }
+        });
+    }
     animeScroll();
-})
+    $(document).scroll(debouce(function() {
+        animeScroll();
+    }, 200));
+})();
