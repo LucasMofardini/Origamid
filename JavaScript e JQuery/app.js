@@ -312,4 +312,11 @@ var global = 1000;
 // essa variavel é global e pode ser usada em todas as funções
 
 
-//hosting
+//Dicas:
+
+//1: Investigue no console.log();
+//2: Faz funcionar primeiro, depois otimiza
+//3: Olhar Gulp e Grump (task runner)
+//4: Praticar, dependendo menos de plugin
+//5: Node, React e Angular (Next Level)
+//6:
