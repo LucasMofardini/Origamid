@@ -299,6 +299,9 @@ function soma() {
     var b = aa + animate;
     //a variavel b tem escopo apenas dentro da function
     //a variavel aa tem acesso a soma
+
+    variavelGlobal = 100;
+    // essa variavel nao tem escopo, é uma variavel forçada global
     function ok() {
         //a variavel aa tem acesso a functuion ok
         var c = aa - aa;
@@ -307,3 +310,6 @@ function soma() {
 }
 var global = 1000;
 // essa variavel é global e pode ser usada em todas as funções
+
+
+//hosting
