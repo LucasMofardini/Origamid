@@ -291,3 +291,17 @@ setTimeout(function() {
 setTimeout(function() {
     $('button').css('background', 'green');
 }, 2000);
+
+//escopo dentro da function
+var aa = 1;
+
+function soma() {
+    var b = aa + animate;
+    //a variavel b tem escopo apenas dentro da function
+    //a variavel aa tem acesso a soma
+    function ok() {
+        //a variavel aa tem acesso a functuion ok
+        var c = aa - aa;
+        // a variavel nao pode ser ultilizada fora do escopo da function ok
+    }
+}
