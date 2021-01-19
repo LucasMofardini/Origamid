@@ -305,3 +305,5 @@ function soma() {
         // a variavel nao pode ser ultilizada fora do escopo da function ok
     }
 }
+var global = 1000;
+// essa variavel é global e pode ser usada em todas as funções
