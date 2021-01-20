@@ -14,3 +14,4 @@ Me esclareceu varias duvidas que eu tinha em relação ao JQuery, futuramente go
 colocar todo o aprendizado aqui no README;
 ```
 
+ * ### React
