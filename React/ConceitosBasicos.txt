@@ -1,0 +1,9 @@
+-- Tudo é objeto
+-- Arrow function
+-- Destructuring 
+-- Rest e Spread
+-- Module (Export / Import);
+-- Fech
+-- Async / Await
+-- Arrays (Map e Filter)
+-- Expressões 
