@@ -10,8 +10,11 @@ e crio seções, divs, etc no html e css;
  * ### JavaScript e JQuery
 
 ```
-Me esclareceu varias duvidas que eu tinha em relação ao JQuery, futuramente gostaria de 
-colocar todo o aprendizado aqui no README;
+Me esclareceu varias duvidas que eu tinha em relação ao JQuery, e ajudou a fazer e continuar
+projetos com o JQuery;
 ```
 
  * ### React
+ ```
+ Iniciando agora no React
+ ```
