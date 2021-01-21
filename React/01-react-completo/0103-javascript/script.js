@@ -67,3 +67,18 @@ const carro = {
 const carroAno = { ...carro, ano: 2002 };
 console.log(carroAno);
 console.log(carro);
+
+//Module
+//Só funciona com HTTP
+import { areaQuadrado } from './quadrado.js';
+import { perimetroQuadrado } from './quadrado.js';
+// import {areaQuadrado, perimetroQuadrado} from './quadrado.js';
+console.log('Sua area é ' + areaQuadrado(5));
+console.log('Seu perimetro é ' + perimetroQuadrado(5));
+// ou
+import quadrado from './quadrado.js';
+console.log('Área com import pelo objeto ' + quadrado.areaQuadrado(10));
+console.log(
+  'Perimetro importado pelo objeto ' + quadrado.perimetroQuadrado(10),
+);
+console.log('Soma numero com import pelo objeto ' + quadrado.somaNumero(10));
