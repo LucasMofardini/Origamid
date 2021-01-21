@@ -82,3 +82,28 @@ console.log(
   'Perimetro importado pelo objeto ' + quadrado.perimetroQuadrado(10),
 );
 console.log('Soma numero com import pelo objeto ' + quadrado.somaNumero(10));
+
+//Fetch
+
+fetch('https://ranekapi.origamid.dev/json/api/produto')
+  .then((response) => response.json())
+  .then((json) => {
+    console.log('Com fetch e then');
+    console.log(json);
+  });
+
+function fecthProdutos(url) {
+  const response = fech(url);
+  return response;
+}
+
+async function fetchProdutos(url) {
+  const response = await fetch(url);
+  const json = await response.json();
+  console.log('Com async e await');
+  console.log(json);
+  return json;
+}
+const produtos = fetchProdutos(
+  'https://ranekapi.origamid.dev/json/api/produto',
+);

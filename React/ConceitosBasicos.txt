@@ -3,7 +3,7 @@
 -- Destructuring 
 -- Rest e Spread
 -- Module (Export / Import);
--- Fech
+-- Fetch
 -- Async / Await
 -- Arrays (Map e Filter)
 -- Expressões 
