@@ -83,7 +83,7 @@ console.log(
 );
 console.log('Soma numero com import pelo objeto ' + quadrado.somaNumero(10));
 
-//Fetch
+//Fetch, async and await
 
 fetch('https://ranekapi.origamid.dev/json/api/produto')
   .then((response) => response.json())
@@ -107,3 +107,19 @@ async function fetchProdutos(url) {
 const produtos = fetchProdutos(
   'https://ranekapi.origamid.dev/json/api/produto',
 );
+//Map and Filter
+const precos = [
+  'creditos',
+  'R$500',
+  'R$200',
+  'Contas a pagar',
+  'R$340',
+  'R$213',
+];
+const precosFilter = precos.filter((p) => p.includes('R$'));
+const precosNumeros = precosFilter.map((preco) =>
+  Number(preco.replace('R$', '')),
+);
+console.log(precosFilter);
+
+console.log(precosNumeros);
