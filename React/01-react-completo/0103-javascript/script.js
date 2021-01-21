@@ -121,5 +121,28 @@ const precosNumeros = precosFilter.map((preco) =>
   Number(preco.replace('R$', '')),
 );
 console.log(precosFilter);
-
 console.log(precosNumeros);
+
+//Expressões
+
+const grupoA = 100;
+const grupoB = 200;
+// ^^ Isso é uma expressão
+
+if (grupoA > grupoB) {
+  console.log('Grupo A é maior');
+} else {
+  console.log('Grupo B é maior');
+}
+//^^ Isso não é uma expressão, é um codigo
+//Isso é uma expressão :
+const vencedor = grupoA > grupoB ? 'Grupo A venceu' : 'Grupo B venceu';
+console.log(vencedor);
+//Isso é uma expressão :
+const aNum = [1, 3132, 312, 21];
+//Isso é uma expressão :
+const exNum = grupoA * (grupoB / grupoA);
+//Isso é uma expressão :
+const active = true;
+const button = active && 'botao está ativo';
+console.log(button);
