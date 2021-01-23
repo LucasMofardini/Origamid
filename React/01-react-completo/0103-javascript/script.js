@@ -146,3 +146,5 @@ const exNum = grupoA * (grupoB / grupoA);
 const active = true;
 const button = active && 'botao está ativo';
 console.log(button);
+
+//Startando o projeto
