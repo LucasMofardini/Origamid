@@ -18,10 +18,35 @@
       // Cria um componente chamado App
       // O componente retorna JSX e por isso
       // o Babel irá transformar o mesmo
-      function App() {
-        return <div>Meu App</div>;
-      }
+      // Sempre letras maiusculas para começar a function
+     const Comprar = () => {
+         //desestrutura o array do useStates 
+    const [contador, setContador] = React.useState(0);
+    const val = 50;
 
+    return (
+      <div>
+        <p>Total: {contador}</p>
+        <p>Preço: R$ {contador * val}</p>
+        <button onClick={() => setContador(contador + 1)}>Comprar</button>
+      </div>
+    );
+  };
+      const Button = () => {
+           function handleClick(event) {
+                    console.log('Comprou: ' + event.target.innerText);
+           }
+          return <button onClick={handleClick}>Olá</button>;
+      }
+        const App = () => {
+        return <div>Meu App
+            <Button/>
+            <div>Compre aqui tambem. 
+                <Button/>
+                <Comprar/>
+                 </div>
+        </div>;
+      }
       // Renderiza o componente App no elemento que tiver id = app
       ReactDOM.render(<App />, document.getElementById('app'));
     </script>
