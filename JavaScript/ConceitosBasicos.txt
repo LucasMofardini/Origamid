@@ -2,9 +2,22 @@
 --Strings 
 --Arrays
 --Promises
---Fetch
+--Fetch (AJAX)
+--JSON 
+--API
+--HTTP
+--Modulos
+--Async / Await
+--Classes
+--Construtor
+--Get/Set
+--Extends
+--Desestruturação 
+--Criar Plugin Slide
 --RegExp
 --NPM
 --Git
 --Babel
 --Webpack
+
+ES6+ = ecmaScript 
