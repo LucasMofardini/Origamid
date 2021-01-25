@@ -1,1 +1,7 @@
 --Linguagem de programação interpretada 
+--Aplicação : Front end - Manipular o DOM, Comunicação assincrona com o back
+              Back end  - Comunicação com o banco e arquivos usando NODE
+              Jogos     - Canvas etc
+
+--JavaScript != Java
+--Java Script = errado
