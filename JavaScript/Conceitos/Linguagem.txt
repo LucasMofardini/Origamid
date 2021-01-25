@@ -5,3 +5,4 @@
 
 --JavaScript != Java
 --Java Script = errado
+-- Codepen e JSBin para usar JS na web
