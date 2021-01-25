@@ -1,0 +1,10 @@
+--Objetos
+--Strings 
+--Arrays
+--Promises
+--Fetch
+--RegExp
+--NPM
+--Git
+--Babel
+--Webpack
