@@ -16,5 +16,10 @@ projetos com o JQuery;
 
  * ### React
  ```
- Iniciando agora no React
+Pausa no React para fazer o Js ES6
+ ```
+ 
+ * ### JavaScript ES6
+ ```
+Iniciando Js ES6+
  ```
