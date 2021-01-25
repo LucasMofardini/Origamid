@@ -51,3 +51,4 @@ var num1, num2, num3, num4, num5;
 
 console.log('Nome Completo : ' +
     nome, 'Idade : ' + idade, 'Comida Favorita : ' + comidaFav);
+//Variaveis
