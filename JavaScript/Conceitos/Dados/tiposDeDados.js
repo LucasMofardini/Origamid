@@ -27,7 +27,7 @@ console.log('-------- Exercicios --------')
 var str = 'Algo'
 console.log(str);
 // Declare uma variável contendo um número dentro de uma string
-var content = ' Lucas ' + 1000;
+var content = ' Lucas 1000 ' + 1000;
 console.log(content)
     // Declare uma variável com a sua idade
 var idade = 18
