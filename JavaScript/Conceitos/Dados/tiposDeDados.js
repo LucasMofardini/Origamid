@@ -6,7 +6,8 @@ var comida = null; //Nulo
 var simbolo = Symbol() //Simbolo
 var objt = {} //Objeto
     //-------------------------------//
-
+    // String //
+console.log('-------- String --------');
 console.log(typeof nome); // String
 console.log(typeof comida); // Objeto
 
@@ -22,8 +23,8 @@ var frase2 = `Lucas Fez ${gols * 5} Gols`; //Expressão
 console.log(frase1, frase2);
 
 // -------------------//
-console.log('-------- Exercicios --------')
-    // Declare uma variável contendo uma string
+console.log('-------- Exercicios String --------');
+// Declare uma variável contendo uma string
 var str = 'Algo'
 console.log(str);
 // Declare uma variável contendo um número dentro de uma string
@@ -47,3 +48,30 @@ console.log(frase2);
 // Verifique o tipo da variável que contém o seu nome
 var verifica = typeof meuNome;
 console.log(verifica);
+
+//-------------------------------//
+// Numero //
+console.log('-------- Número --------');
+var idade = 18;
+var decimal = 1.3; //Decimal é com '.'
+var exp = 2e10;
+console.log(idade, decimal, exp);
+
+var num1 = 10,
+    num2 = 3;
+var soma = num1 + num2;
+console.log(soma);
+var divi = num1 / num2;
+console.log(divi);
+
+//Operadores ariimeticos
+var soma2 = 'Lucas ' + 10;
+console.log(soma2); // Lucas 10
+var divi1 = 'lucas' / 20;
+console.log(divi1); // NAN
+var divi2 = '10' / 2;
+console.log(divi2); // 5
+var mult1 = 'lucas' / 20;
+console.log(divi1); // NAN
+var mult2 = '10' * 2;
+console.log(mult2); // 20
