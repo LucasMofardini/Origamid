@@ -34,10 +34,13 @@ var idade = 18
 console.log(idade);
 // Declare duas variáveis, uma com seu nome
 // e outra com seu sobrenome e some as mesmas
-var meuNome = 'Lucas ';
+var meuNome = 'Lucas';
 var meuSobrenome = 'Mofardini';
 var meuNomeInteiro = meuNome + meuSobrenome;
+var nomeExpress = `${meuNome} ${meuSobrenome}`;
 console.log(meuNomeInteiro);
+console.log(nomeExpress);
+
 // Coloque a seguinte frase em uma variável: It's time
 var frase2 = " It's time";
 console.log(frase2);
