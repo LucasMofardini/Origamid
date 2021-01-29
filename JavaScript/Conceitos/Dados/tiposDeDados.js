@@ -1,12 +1,12 @@
 var nome = 'Lucas'; //String
 var numero = 3; //Numero
-var ok = true //Boolean
+var ok = true; //Boolean
 var time; //Undefined
 var comida = null; //Nulo
-var simbolo = Symbol() //Simbolo
-var objt = {} //Objeto
-    //-------------------------------//
-    // String //
+var simbolo = Symbol(); //Simbolo
+var objt = {}; //Objeto
+//-------------------------------//
+// String //
 console.log('-------- String --------');
 console.log(typeof nome); // String
 console.log(typeof comida); // Objeto
@@ -18,20 +18,20 @@ console.log(nomeCompleto);
 
 // Template String
 var gols = 1000;
-var frase1 = "Lucas Fez " + gols + " |"; // String
+var frase1 = 'Lucas Fez ' + gols + ' |'; // String
 var frase2 = `Lucas Fez ${gols * 5} Gols`; //Expressão
 console.log(frase1, frase2);
 
 // -------------------//
 console.log('-------- Exercicios String --------');
 // Declare uma variável contendo uma string
-var str = 'Algo'
+var str = 'Algo';
 console.log(str);
 // Declare uma variável contendo um número dentro de uma string
 var content = ' Lucas 1000 ' + 1000;
-console.log(content)
-    // Declare uma variável com a sua idade
-var idade = 18
+console.log(content);
+// Declare uma variável com a sua idade
+var idade = 18;
 console.log(idade);
 // Declare duas variáveis, uma com seu nome
 // e outra com seu sobrenome e some as mesmas
@@ -64,7 +64,7 @@ console.log(soma);
 var divi = num1 / num2;
 console.log(divi);
 
-//Operadores ariimeticos
+//Operadores Aritmeticos
 var soma2 = 'Lucas ' + 10;
 console.log(soma2); // Lucas 10
 var divi1 = 'lucas' / 20;
