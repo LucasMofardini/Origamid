@@ -80,6 +80,18 @@ console.log(mult2); // 20
 /* false ou true */
 
 var possuiGraduacao = true;
+// vai ser executado o true
+if (possuiGraduacao) {
+    console.log('Voce possui graduação ');
+} else {
+    console.log('Voce não possui graduação ');
+}
+
+//Boolean
+/* false ou true */
+
+var possuiGraduacao = true;
+// vai ser executado o true
 if (possuiGraduacao) {
     console.log('Voce possui graduação ');
 } else {
