@@ -97,3 +97,4 @@ if (possuiGraduacao) {
 } else {
     console.log('Voce não possui graduação ');
 }
+//O else vai ser executado se não acontecer o if
