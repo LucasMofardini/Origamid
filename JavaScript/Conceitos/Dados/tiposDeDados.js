@@ -75,3 +75,13 @@ var mult1 = 'lucas' / 20;
 console.log(divi1); // NAN
 var mult2 = '10' * 2;
 console.log(mult2); // 20
+
+//Boolean
+/* false ou true */
+
+var possuiGraduacao = true;
+if (possuiGraduacao) {
+    console.log('Voce possui graduação ');
+} else {
+    console.log('Voce não possui graduação ');
+}
