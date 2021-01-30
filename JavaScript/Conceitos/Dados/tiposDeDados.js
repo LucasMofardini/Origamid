@@ -124,3 +124,26 @@ if (ab) {
 // if(null)
 // if(undefined)
 // if('') // ou "" ou ``
+
+if (!ab) {
+  console.log(ab);
+} else {
+  console.log('possui nome ');
+}
+//O primeiro '!' inverte o valor
+//Com '!!' voce verifica o valor;
+
+console.log(!!ab); //false
+console.log(!!l); //true
+
+//Ultimo é o sinal de igual
+// Operadores de comparação
+// 10 > 5 true
+// 10 >= 10 true
+// 1 >= 2 false
+// 123 <= 10 false
+
+10 == 10 true
+10 === '10' false
+'Gato' !== 'Gato' false
+'gato' !== 'Gato' true
