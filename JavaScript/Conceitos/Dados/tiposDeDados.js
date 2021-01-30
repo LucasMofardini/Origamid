@@ -116,3 +116,11 @@ if (ab) {
 }
 //Com o 'ab' ele retorna 'Nao possui nome' pois uma variavel vazia da negativo
 //com o 'l' da true
+//TODOS QUE SAEM COMO FALSO
+// Falsy
+// if(false)
+// if(0) // ou -0
+// if(NaN)
+// if(null)
+// if(undefined)
+// if('') // ou "" ou ``
