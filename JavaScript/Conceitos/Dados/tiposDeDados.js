@@ -218,6 +218,7 @@ if (('Gato' === 'gato') || (5 > 2)) {
     //false               //verdadeiro
 
     console.log('Gato' && 'Cão');
+    //sempre da a ultima verdadeira
 } else {
     console.log('Falso');
 }
