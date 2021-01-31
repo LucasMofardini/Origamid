@@ -58,7 +58,7 @@ var exp = 2e10;
 console.log(idade, decimal, exp);
 
 var num1 = 10,
-  num2 = 3;
+    num2 = 3;
 var soma = num1 + num2;
 console.log(soma);
 var divi = num1 / num2;
@@ -82,9 +82,9 @@ console.log(mult2); // 20
 var possuiGraduacao = true;
 // vai ser executado o true
 if (possuiGraduacao) {
-  console.log('Voce possui graduação ');
+    console.log('Voce possui graduação ');
 } else {
-  console.log('Voce não possui graduação ');
+    console.log('Voce não possui graduação ');
 }
 
 //Boolean
@@ -94,25 +94,25 @@ var possuiGraduacao = true;
 var possuiDoutorado = false;
 // vai ser executado o true
 if (possuiGraduacao) {
-  console.log('Voce possui graduação ');
+    console.log('Voce possui graduação ');
 } else {
-  console.log('Voce não possui graduação ');
+    console.log('Voce não possui graduação ');
 }
 //O else vai ser executado se não acontecer o if
 
 if (possuiGraduacao) {
-  console.log('SIM');
+    console.log('SIM');
 } else if (possuiGraduacao) {
-  console.log('SIM');
+    console.log('SIM');
 } else {
-  console.log('Nao possui nada');
+    console.log('Nao possui nada');
 }
 var ab = '';
 var l = 'lucas';
 if (ab) {
-  console.log(ab);
+    console.log(ab);
 } else {
-  console.log('Nao possui nome ');
+    console.log('Nao possui nome ');
 }
 //Com o 'ab' ele retorna 'Nao possui nome' pois uma variavel vazia da negativo
 //com o 'l' da true
@@ -126,9 +126,9 @@ if (ab) {
 // if('') // ou "" ou ``
 
 if (!ab) {
-  console.log(ab);
+    console.log(ab);
 } else {
-  console.log('possui nome ');
+    console.log('possui nome ');
 }
 //O primeiro '!' inverte o valor
 //Com '!!' voce verifica o valor;
@@ -143,7 +143,17 @@ console.log(!!l); //true
 // 1 >= 2 false
 // 123 <= 10 false
 
-10 == 10 true
-10 === '10' false
-'Gato' !== 'Gato' false
-'gato' !== 'Gato' true
+// 10 == 10 true
+// 10 === '10' false
+// 'Gato' !== 'Gato' false
+// 'gato' !== 'Gato' true
+
+// Operador 'E', 'and'
+
+// true && true // true
+// true && false //false
+// false && false //false
+// 'gato' && 'cao' //'cao'
+// 'gato' && false //false
+
+// Operador ou, 'or'
