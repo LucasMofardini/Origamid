@@ -157,3 +157,19 @@ console.log(!!l); //true
 // 'gato' && false //false
 
 // Operador ou, 'or'
+
+// 5 - 5 || 5 + 5 || 10 - 2 //10, ele fica em busca do primeiro verdadeiro
+
+// Switch case
+var corFavorita = 'azul';
+
+switch (corFavorita) {
+    case 'azul':
+        console.log('Olhe para o ceu');
+        break;
+    case 'amarelo':
+        console.log('Olhe para o sol');
+        break;
+    default:
+        console.log('feche os olhos');
+}
