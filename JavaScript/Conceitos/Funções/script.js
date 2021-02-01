@@ -7,6 +7,7 @@ console.log(areaQuadrado(3));
 //Peso e altura são PARAMETROS
 function imc(peso, altura) {
     const imc = peso / (altura * 2);
+
     return imc;
 }
 imc(70, 1.80); //70 e 1.80 são ARGUMENTOS
@@ -32,3 +33,24 @@ console.log(corFavorita('verde')); //'eu gosto de mato'
 addEventListener('click', function() {
     alert('CLicou');
 });
+
+
+function terceiraIdade(idade) {
+    if (typeof idade !== 'number') {
+        return 'Preenche um número';
+    } else if (idade >= 60) {
+        return true;
+    } else {
+        return false;
+    }
+}
+//Escopo
+var total = 193;
+
+function faltaVisitar(paisesVisitados) {
+    //template string
+    return `Falta visitar ${total - paisesVisitados} países`;
+
+}
+console.log(faltaVisitar(20));
+//O JavaScript move todas as variaveis e funçoes para cima do código
