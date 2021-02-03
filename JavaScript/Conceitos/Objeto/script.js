@@ -88,3 +88,49 @@ var cachorro = {
 }
 console.log(cachorro);
 console.log(cachorro.latir('homem'));
+
+//Tudo que der pra acessar com . é objeto
+var nome = 'Lucas';
+console.log(nome.length); // 5
+console.log(nome.charAt(1)); // U
+console.log(nome.replace('cas', 'ana')); //Luana
+
+var nomeMinusculo = nome.toLowerCase();
+console.log(nomeMinusculo);
+
+var numero = 11.8;
+numero.toFixed(); // 12
+console.log(numero.toFixed());
+
+var btn = document.querySelector('.btn');
+btn.addEventListener('click', function() {
+    alert('Clicou');
+});
+
+//------------ Exercicio ------------
+
+// nomeie 3 propriedades ou métodos de strings
+var carro = {
+    cor: 'Azul',
+    portas: 4,
+    modelo: 2018,
+    linha: 3,
+}
+console.log(typeof carro.portas.toString()); //string
+console.log(carro.cor.length);
+console.log(carro.cor.charAt('2')); // u de azUl
+
+// nomeie 5 propriedades ou métodos de elementos do DOM
+
+// addEventListener;
+// document;
+//appendChild;
+//innerHtml;
+//id;
+//className;
+// console.log();
+// alert();
+// Math.random();
+
+// busque na web um objeto (método) capaz de interagir com o clipboard, 
+// clipboard é a parte do seu computador que lida com o CTRL + C e CTRL + V
