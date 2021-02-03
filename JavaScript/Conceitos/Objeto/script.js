@@ -26,3 +26,22 @@ console.log(Math.PI);
 console.log(Math.random());
 
 //TUDO É OBJETO
+/* dot notation get */
+var menu = {
+    width: 200,
+    height: 40,
+    background: 'blue',
+    metadeHeight() {
+        return this.height / 2;
+        //esse this pega o height do objeto menu
+    }
+}
+console.log(menu.background); // blue
+/* dot notation set */
+
+menu.background = 'black';
+console.log(menu.background); // black
+
+menu.color = 'white';
+console.log(menu) // Agora tem color white
+console.log(menu.metadeHeight());
