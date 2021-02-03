@@ -77,6 +77,14 @@ var cachorro = {
     raça: 'Labrador',
     cor: 'Preto',
     idade: 10,
-    Late: true,
+    latir(genero) {
+        if (genero === 'homem') {
+            return 'Latir';
+        } else {
+            return 'Nada';
+        }
+
+    },
 }
-console.log(cachorro)
+console.log(cachorro);
+console.log(cachorro.latir('homem'));
