@@ -134,3 +134,20 @@ console.log(carro.cor.charAt('2')); // u de azUl
 
 // busque na web um objeto (método) capaz de interagir com o clipboard, 
 // clipboard é a parte do seu computador que lida com o CTRL + C e CTRL + V
+
+var videoGames = ['Switch', 'PS5', 'Xbox'];
+videoGames[0]; //Switch
+videoGames.pop(); //Remove o ultimo item da array e retorna ele;
+videoGames.push('3DS'); //Adiciona ao final
+videoGames.length; //Ver o tamanho da array
+
+//LOOP
+for (var i = 0; i <= 10; i++) {
+    //INICIO  CONDIÇÂO  INCREMENTO
+    console.log(i);
+}
+var n = 10;
+while (n >= 0) {
+    console.log(n);
+    n--;
+}
