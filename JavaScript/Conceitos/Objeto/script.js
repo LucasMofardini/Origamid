@@ -142,12 +142,25 @@ videoGames.push('3DS'); //Adiciona ao final
 videoGames.length; //Ver o tamanho da array
 
 //LOOP
+//For
 for (var i = 0; i <= 10; i++) {
     //INICIO  CONDIÇÂO  INCREMENTO
     console.log(i);
 }
+//While
 var n = 10;
 while (n >= 0) {
     console.log(n);
     n--;
+}
+console.clear();
+
+var nomes = ['Lucas', 'Gabriel', 'Isabel', 'Vitoria', 'Caique', 'André'];
+//Variavel 'i' começa com 0
+//Enquanto 'i' for menor que o tamanho da array nomes 
+//Adiciona mais 1 no 'i'
+for (var i = 0; i < nomes.length; i++) {
+    //Mostra no console o array nomes que tem o index da variavel 'i'
+    //Que no caso começa com 0
+    console.log(nomes[i]);
 }
