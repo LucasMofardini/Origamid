@@ -163,4 +163,42 @@ for (var i = 0; i < nomes.length; i++) {
     //Mostra no console o array nomes que tem o index da variavel 'i'
     //Que no caso começa com 0
     console.log(nomes[i]);
+    //Para quando achar 'Isabel'
+    if (nomes[i] === 'Isabel') {
+        //Quebra o Loop
+        break;
+    }
 }
+console.log('___________ ForEach ___________')
+    //ForEach 
+nomes.forEach(function(nome) {
+    console.log(nome);
+});
+console.log('___________ Exercicio ___________')
+
+// Crie uma array com os anos que o Brasil ganhou a copa
+// 1959, 1962, 1970, 1994, 2002
+var gCopa = [1959, 1962, 1970, 1994, 2002];
+console.log(gCopa);
+
+// Interaja com a array utilizando um loop, para mostrar
+// no console a seguinte mensagem, `O brasil ganhou a copa de ${ano}`
+gCopa.forEach(function(ano) {
+    var g = `O Brasil ganhou a copa de ${ano}`;
+    console.log(g);
+});
+// Interaja com um loop nas frutas abaixo e pare ao chegar em Pera
+var frutas = ['Banana', 'Maçã', 'Pera', 'Uva', 'Melância']
+
+for (var i = 0; i < frutas.length; i++) {
+    var fruta = frutas[i];
+    console.log(fruta);
+    if (fruta == 'Pera') {
+        break;
+    }
+}
+console.log('-------')
+    // Coloque a última fruta da array acima em uma variável,
+var last = frutas[frutas.length - 1];
+console.log(last)
+    // sem remover a mesma da array.
