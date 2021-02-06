@@ -244,3 +244,4 @@ var possuiCasa = true;
 var darCredito;
 darCredito = (possuiCarro && possuiCasa) ? true : false;
 console.log(darCredito);
+//Certo
