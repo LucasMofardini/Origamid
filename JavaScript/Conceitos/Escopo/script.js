@@ -79,8 +79,8 @@ function somarDois(x) {
 function dividirDois(x) {
     return x / dois;
 }
-somarDois(4);
-dividirDois(6);
+console.log(somarDois(4));
+console.log(dividirDois(6));
 
 // O que fazer para total retornar 500?
 const numero = 50;
