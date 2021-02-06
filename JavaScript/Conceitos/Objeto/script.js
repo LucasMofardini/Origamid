@@ -202,3 +202,45 @@ console.log('-------')
 var last = frutas[frutas.length - 1];
 console.log(last)
     // sem remover a mesma da array.
+
+console.log('--------------------');
+
+// Operadores de atribuição
+
+var x = 5;
+var y = 10;
+console.log(x += y); //15
+console.log(x /= y);
+console.log(x *= y);
+
+// Operador ternário
+// condição ? true : false
+
+var idade = 20;
+var at1, at2;
+var podeBeber = (idade >= 18) ? at1 = 30 : at2 = 20;
+console.log(podeBeber); //30
+
+//IF com uma linha
+var possuiFacul = true;
+if (possuiFacul)
+    console.log('SIM');
+else
+    console.log('Nao');
+
+//---------------- Exercicio ----------------
+
+// Some 500 ao valor de scroll abaixo,
+// atribuindo o novo valor a scroll
+var scroll = 1000;
+scroll += 500;
+console.log(scroll);
+
+// Atribua true para a variável darCredito,
+// caso o cliente possua carro e casa.
+// E false caso o contrário.
+var possuiCarro = true;
+var possuiCasa = true;
+var darCredito;
+darCredito = (possuiCarro && possuiCasa) ? true : false;
+console.log(darCredito);
