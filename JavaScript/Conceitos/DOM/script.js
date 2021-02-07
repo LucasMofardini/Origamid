@@ -31,7 +31,7 @@ console.log(window.location.href);
 // possua a classe ativo
 const ativo = document.querySelector('.ativo');
 // Retorne a linguagem do navegador
-
+console.log(window.navigator.language);
 // Retorne a largura da janela
 console.log('Largura pelo inner ' + window.innerWidth);
 console.log('Largura pelo screen ' + window.screen.availWidth);
