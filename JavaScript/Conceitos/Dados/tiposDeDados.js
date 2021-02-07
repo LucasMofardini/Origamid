@@ -58,7 +58,7 @@ var exp = 2e10;
 console.log(idade, decimal, exp);
 
 var num1 = 10,
-    num2 = 3;
+  num2 = 3;
 var soma = num1 + num2;
 console.log(soma);
 var divi = num1 / num2;
@@ -82,9 +82,9 @@ console.log(mult2); // 20
 var possuiGraduacao = true;
 // vai ser executado o true
 if (possuiGraduacao) {
-    console.log('Voce possui graduação ');
+  console.log('Voce possui graduação ');
 } else {
-    console.log('Voce não possui graduação ');
+  console.log('Voce não possui graduação ');
 }
 
 //Boolean
@@ -94,25 +94,25 @@ var possuiGraduacao = true;
 var possuiDoutorado = false;
 // vai ser executado o true
 if (possuiGraduacao) {
-    console.log('Voce possui graduação ');
+  console.log('Voce possui graduação ');
 } else {
-    console.log('Voce não possui graduação ');
+  console.log('Voce não possui graduação ');
 }
 //O else vai ser executado se não acontecer o if
 
 if (possuiGraduacao) {
-    console.log('SIM');
+  console.log('SIM');
 } else if (possuiGraduacao) {
-    console.log('SIM');
+  console.log('SIM');
 } else {
-    console.log('Nao possui nada');
+  console.log('Nao possui nada');
 }
 var ab = '';
 var l = 'lucas';
 if (ab) {
-    console.log(ab);
+  console.log(ab);
 } else {
-    console.log('Nao possui nome ');
+  console.log('Nao possui nome ');
 }
 //Com o 'ab' ele retorna 'Nao possui nome' pois uma variavel vazia da negativo
 //com o 'l' da true
@@ -126,9 +126,9 @@ if (ab) {
 // if('') // ou "" ou ``
 
 if (!ab) {
-    console.log(ab);
+  console.log(ab);
 } else {
-    console.log('possui nome ');
+  console.log('possui nome ');
 }
 //O primeiro '!' inverte o valor
 //Com '!!' voce verifica o valor;
@@ -147,79 +147,3 @@ console.log(!!l); //true
 // 10 === '10' false
 // 'Gato' !== 'Gato' false
 // 'gato' !== 'Gato' true
-
-// Operador 'E', 'and'
-
-// true && true // true
-// true && false //false
-// false && false //false
-// 'gato' && 'cao' //'cao'
-// 'gato' && false //false
-
-// Operador ou, 'or'
-
-// 5 - 5 || 5 + 5 || 10 - 2 //10, ele fica em busca do primeiro verdadeiro
-
-// Switch case
-var corFavorita = 'azul';
-
-switch (corFavorita) {
-    case 'azul':
-        console.log('Olhe para o ceu');
-        break;
-    case 'amarelo':
-        console.log('Olhe para o sol');
-        break;
-    default:
-        console.log('feche os olhos');
-}
-// Exercicio
-
-// Verifique se a sua idade é maior do que a de algum parente
-// Dependendo do resultado coloque no console 'É maior', 'É igual' ou 'É menor'
-var idadeParente = 50;
-if (idade > idadeParente) {
-    console.log('É maior');
-} else if (idade === idadeParente) {
-    console.log('É igual');
-} else {
-    console.log('É menor');
-}
-// Qual valor é retornado na seguinte expressão?
-var expressao = (5 - 2) && (5 - ' ') && (5 - 2);
-// 3
-// Verifique se as seguintes variáveis são Truthy ou Falsy
-var nomeA = 'Andre';
-var idadeA = 28;
-var possuiDoutoradoA = false;
-var empregoFuturoA;
-var dinheiroNaContaA = 0;
-console.log(!!nomeA);
-console.log(!!idadeA);
-console.log(!!possuiDoutoradoA);
-console.log(!!empregoFuturoA);
-console.log(!!dinheiroNaContaA);
-
-// Compare o total de habitantes do Brasil com China (valor em milhões)
-var brasil = 207;
-var china = 1340;
-console.log('Brasil e china');
-console.log(brasil >= china);
-// O que irá aparecer no console?
-if (('Gato' === 'gato') && (5 > 2)) {
-    //false               //verdadeiro
-    console.log('Verdadeiro');
-} else {
-    console.log('Falso');
-}
-//Vai aparecer Falso
-// O que irá aparecer no console?
-if (('Gato' === 'gato') || (5 > 2)) {
-    //false               //verdadeiro
-
-    console.log('Gato' && 'Cão');
-    //sempre da a ultima verdadeira
-} else {
-    console.log('Falso');
-}
-//Vai aparecer 'cao'
