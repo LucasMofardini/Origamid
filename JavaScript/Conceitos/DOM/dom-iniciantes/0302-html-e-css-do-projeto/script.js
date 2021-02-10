@@ -30,6 +30,7 @@ firstUl.classList.add('grid-section');
 
 console.log(gridSectionHtml); // 4 itens //Ao vivo
 console.log(gridSectionNode); // 3 itens //Estático
+firstUl.classList.remove('grid-section');
 
 //ArrayLike
 //Coloca todos as classes gridSectionNode
@@ -49,6 +50,7 @@ firstLi.classList.add('grid-section');
 
 console.log(arrayGrid); //4 Itens
 console.log(gridSectionHtml); //5 Itens
+firstLi.classList.remove('grid-section');
 
 console.log('------- Exercicio -------');
 // Retorne no console todas as imagens do site
@@ -73,3 +75,9 @@ console.log(`first h2 =  ${firstH2.innerHTML}`);
 const Ps = document.querySelectorAll('p');
 const lastP = Ps[--Ps.length];
 console.log(lastP);
+
+//ForEach
+//Method do array
+
+const imgs = document.querySelectorAll('img');
+imgs.forEach()
