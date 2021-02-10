@@ -32,9 +32,7 @@ image.forEach((item) => {
 console.log('------- Exercicios -------');
 // Mostre no console cada parágrado do site
 const parag = document.querySelectorAll('p');
-parag.forEach((item) => {
-    console.log(item);
-});
+console.log(parag);
 // Mostre o texto dos parágrafos no console
 parag.forEach((item) => {
     console.log(item.innerHTML);
