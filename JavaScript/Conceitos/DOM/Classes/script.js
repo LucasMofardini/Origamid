@@ -74,3 +74,11 @@ imagens.forEach((item) => {
 const linksExterno = document.querySelector('a[href^="http"]');
 linksExterno.setAttribute('href', 'https://www.google.com');
 console.log(linksExterno);
+
+//Dimensões e distancias
+
+const section = document.querySelector('.animais');
+
+section.clientHeight; // height + padding
+section.offsetHeight; // height + padding + border
+section.scrollHeight; // height total, mesmo dentro de scroll
