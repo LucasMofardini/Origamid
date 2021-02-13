@@ -87,6 +87,7 @@ allElements.addEventListener('click', handleBody);
 
 // Utilizando o código anterior, ao invés de mostrar no console,
 // remova o elemento que está sendo clicado, o método remove() remove um elemento
+
 // function handleBodyRemove(e) {
 //     e.target.remove();
 // }
@@ -96,8 +97,11 @@ allElements.addEventListener('click', handleBody);
 
 function handleKey(e) {
     if (e.key === 't') {
-        console.log('aperto t');
-        document.body.style.fontSize = "200%";
+        // console.log('aperto t');
+        const tamanho = document.documentElement.style.fontSize = "150%";
+    } else if (e.key === 'r') {
+        document.documentElement.style.fontSize = "100%";
+
     }
 }
 window.addEventListener('keydown', handleKey);
