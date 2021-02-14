@@ -98,8 +98,8 @@ allElements.addEventListener('click', handleBody);
 function handleKey(e) {
     if (e.key === 't') {
         // console.log('aperto t');
-        const tamanho = document.documentElement.style.fontSize = "150%";
-    } else if (e.key === 'r') {
+        document.documentElement.style.fontSize = "150%";
+    } else if (document.documentElement.style.fontSize === "150%") {
         document.documentElement.style.fontSize = "100%";
 
     }
