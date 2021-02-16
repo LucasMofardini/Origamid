@@ -53,7 +53,7 @@ Dom.ativar(); // Ativa a UL */
 
 //Transformando em função construtora
 
-function Dom(seletor) {
+function Dom1(seletor) {
     this.element = () => {
         return document.querySelector(seletor);
     }
@@ -61,8 +61,58 @@ function Dom(seletor) {
         this.element().classList.add(classe);
     }
 }
-const li = new Dom('li'); //Objeto li
-const ul = new Dom('ul'); //Objeto ul 
+const li = new Dom1('li'); //Objeto li
+const ul = new Dom1('ul'); //Objeto ul 
 //Ambos com as mesmas propriedades
 li.ativar('ativo'); // Primeiro Li da página
 ul.ativar('Lucas'); // Primeiro Ul da página
+
+//------------ Exercicios ------------
+// Transforme o objeto abaixo em uma Constructor Function
+/* const pessoa = {
+    nome: 'Nome pessoa',
+    idade: 0,
+    andar() {
+        console.log(this.nome + ' andou');
+    }
+} */
+function Pessoa(nome, idade) {
+    /*   this.nome = nome; // redundancia
+      this.idade = idade; // redundancia */
+    this.andar = () => {
+        console.log(nome + ' andou');
+    }
+}
+
+// Crie 3 pessoas, João - 20 anos,
+// Maria - 25 anos, Bruno - 15 anos
+
+const p1 = new Pessoa('João', 20);
+const p2 = new Pessoa('Maria', 25);
+const p3 = new Pessoa('Bruno', 15);
+
+
+// Crie uma Constructor Function (Dom) para manipulação
+// de listas de elementos do dom. Deve conter as seguintes
+// propriedades e métodos:
+//
+// elements, retorna NodeList com os elementos selecionados
+// addClass(classe), adiciona a classe a todos os elementos
+// removeClass(classe), remove a classe a todos os elementos
+function Dom(element) {
+    const elementos = document.querySelectorAll(element);
+    this.element = () => {
+        return elementos;
+    }
+    this.addClass = (classe) => {
+        return elementos.forEach((item) => {
+            item.classList.add(classe);
+        });
+    }
+    this.removeClass = (classe) => {
+        return elementos.forEach((item) => {
+            item.classList.remove(classe);
+        });
+    }
+}
+const dom1 = new Dom('div');
