@@ -77,8 +77,8 @@ ul.ativar('Lucas'); // Primeiro Ul da página
     }
 } */
 function Pessoa(nome, idade) {
-    /*   this.nome = nome; // redundancia
-      this.idade = idade; // redundancia */
+    this.nome = nome; // redundancia
+    this.idade = idade; // redundancia
     this.andar = () => {
         console.log(nome + ' andou');
     }
@@ -99,18 +99,19 @@ const p3 = new Pessoa('Bruno', 15);
 // elements, retorna NodeList com os elementos selecionados
 // addClass(classe), adiciona a classe a todos os elementos
 // removeClass(classe), remove a classe a todos os elementos
-function Dom(element) {
-    const elementos = document.querySelectorAll(element);
-    this.element = () => {
-        return elementos;
-    }
+function Dom(seletor) {
+    // const elementos = document.querySelectorAll(seletor);
+    // this.elements = elementos;
+    //ou
+    this.elementos = document.querySelectorAll(seletor)
+
     this.addClass = (classe) => {
-        return elementos.forEach((item) => {
+        return this.elementos.forEach((item) => {
             item.classList.add(classe);
         });
     }
     this.removeClass = (classe) => {
-        return elementos.forEach((item) => {
+        return this.elementos.forEach((item) => {
             item.classList.remove(classe);
         });
     }
