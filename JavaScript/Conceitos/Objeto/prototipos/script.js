@@ -57,6 +57,7 @@ console.log('---------- Exercicio ----------');
 // Deve conter nome, sobrenome e idade
 // Crie um método no protótipo que retorne
 // o nome completo da pessoa
+
 function Pessoas(nome, sobrenome, idade) {
   this.nome = nome;
   this.sobrenome = sobrenome;
@@ -70,15 +71,19 @@ const p1 = new Pessoas('lucas', 'mofardini', 19);
 // Liste os métodos acessados por
 // dados criados com NodeList,
 // HTMLCollection, Document
+
 console.log(NodeList.prototype);
+console.log(Object.getOwnPropertyNames(NodeList.prototype));
 console.log(HTMLCollection.prototype);
+console.log(Object.getOwnPropertyNames(HTMLCollection.prototype));
 console.log(Document.prototype);
+console.log(Object.getOwnPropertyNames(Document.prototype));
 
 // Liste os construtores dos dados abaixo
 const li = document.querySelector('li');
 
 li;
-console.log(li.constructor.name); // Elemento Html
+console.log(li.constructor.name); // Elemento Li Html
 li.click;
 console.log(li.click.constructor.name); // Function
 li.innerText;
@@ -90,8 +95,11 @@ console.log(li.hidden.constructor.name); // Boolean
 li.offsetLeft;
 console.log(li.offsetLeft.constructor.name); // Number
 li.click();
-console.log(li.click.constructor.name); // Function
+console.log(li.click.constructor.name); // Undefined
 
 // Qual o construtor do dado abaixo:
-li.hidden.constructor.name; // Boolean
+li.hidden.constructor.name; // String devolvendo um valor 'Boolean'
 console.log('Construtor do li: ' + li.hidden.constructor.name);
+
+//Document = funçao construtora
+//document = objeto construido a partir do Document
