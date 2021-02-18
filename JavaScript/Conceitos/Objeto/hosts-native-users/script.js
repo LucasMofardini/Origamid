@@ -31,3 +31,20 @@ if (typeof Array.from !== undefined) {
 
 //API
 // Application Programming Interface
+
+// Liste 5 objetos nativos
+Array;
+String;
+Number;
+Object;
+Boolean;
+// Liste 5 objetos do browser
+Document;
+addEventListener;
+querySelector;
+Element;
+NodeList;
+// Liste 2 Métodos, Propriedades ou Objetos
+// presentes no Chrome que não existem no Firefox
+webkitHidden;
+webkitVisibilityState;
