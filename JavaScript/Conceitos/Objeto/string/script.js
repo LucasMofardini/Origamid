@@ -48,3 +48,38 @@ console.log(listaPrecos[0].padEnd(20, '.'));
 listaPrecos.forEach((preco) => {
   console.log(preco.padStart(10, '.'));
 });
+
+const frase2 = 'ta';
+
+console.log(frase2.repeat(10));
+
+let listaItens = 'Camisas Bonés Calças Bermudas Vestidos Saias';
+
+listaItens = listaItens.replace(/[ ]+/g, ', ');
+console.log(listaItens);
+
+let preco = 'R$ 1200,43';
+preco = preco.replace(',', '.'); // 'R$ 1200.43'
+
+const arrayLista = listaItens.split(', ');
+console.log(arrayLista);
+
+const htmlText = '<div>O melhor item</div><div>A melhor lista</div>';
+const htmlArray = htmlText.split('div');
+const htmlNovo = htmlArray.join('section');
+
+const sexo1 = 'Feminino';
+const sexo2 = 'feminino';
+const sexo3 = 'FEMININO';
+
+sexo1.toLowerCase() === 'feminino'; // true
+sexo2.toLowerCase() === 'feminino'; // true
+sexo3.toLowerCase() === 'feminino'; // true
+sexo3.toUpperCase() === 'FEMININO'; // true
+
+//Remove espaços
+
+const valor = '  R$ 23.00   ';
+valor.trim(); // 'R$ 23.00'
+valor.trimStart(); // 'R$ 23.00   '
+valor.trimEnd(); // '  R$ 23.00'
