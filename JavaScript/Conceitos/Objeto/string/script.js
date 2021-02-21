@@ -85,7 +85,7 @@ valor.trimStart(); // 'R$ 23.00   '
 valor.trimEnd(); // '  R$ 23.00'
 
 // Exercicios
-
+console.log('----- Exercicios -----');
 // Utilizando o foreach na array abaixo,
 // some os valores de Taxa e os valores de Recebimento
 
@@ -111,25 +111,51 @@ const transacoes = [
     valor: 'R$ 49',
   },
 ];
+let taxaTotal = 0;
+let recebimentoTotal = 0;
+transacoes.forEach((item) => {
+  const nLimpo = +item.valor.replace('R$', '');
+  if (item.descricao.slice(0, 4) === 'Taxa') {
+    taxaTotal += nLimpo;
+  } else {
+    recebimentoTotal += nLimpo;
+  }
+});
+console.log(taxaTotal);
+console.log(recebimentoTotal);
 
 // Retorne uma array com a lista abaixo
 const transportes = 'Carro;Avião;Trem;Ônibus;Bicicleta';
-
+const arrayTransportes = transportes.split(';');
+console.log(arrayTransportes);
 // Substitua todos os span's por a's
-const html = `<ul>
+let html = `<ul>
                 <li><span>Sobre</span></li>
                 <li><span>Produtos</span></li>
                 <li><span>Contato</span></li>
               </ul>`;
+html = html.split('span').join('a');
+console.log(html);
 
 // Retorne o último caracter da frase
-const frase = 'Melhor do ano!';
+const frase3 = 'Melhor do ano!';
+console.log(frase3.slice(-1)); // !
 
 // Retorne o total de taxas
-const transacoes = [
+const trans = [
   'Taxa do Banco',
   '   TAXA DO PÃO',
   '  taxa do mercado',
   'depósito Bancário',
   'TARIFA especial',
 ];
+let n = 0;
+trans.forEach((item) => {
+  item = item.trim();
+  item = item.toLocaleLowerCase();
+  if (item.includes('taxa')) {
+    n++;
+  }
+  console.log(item + ' - ' + item.includes('taxa'));
+});
+console.log(n + ' Itens');
