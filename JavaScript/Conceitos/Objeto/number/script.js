@@ -44,11 +44,16 @@ Math.floor(Math.random() * (72 - 32 + 1)) + 32;
 // Math.floor(Math.random() * (max - min + 1)) + min;
 
 console.log('----- Exercicio -----');
+
 // Retorne um número aleatório
 // entre 1050 e 2000
-console.log(Math.random() * (2000 - 1050 + 1) + 1050);
+
+console.log(Math.floor(Math.random() * (2000 - 1050 + 1) + 1050));
 // Retorne o maior número da lista abaixo
 const numeros = '4, 5, 20, 8, 9';
+const arrayN = numeros.split(',');
+console.log(Math.max(...arrayN));
+//ele passa cada item da array isolado esse spraed
 
 // Crie uma função para limpar os preços
 // e retornar os números com centavos arredondados
@@ -56,9 +61,8 @@ const numeros = '4, 5, 20, 8, 9';
 const listaPrecos = ['R$ 59,99', ' R$ 100,222', 'R$ 230  ', 'r$  200'];
 let soma = 0;
 listaPrecos.forEach((item) => {
-
     limpPreco = +item.slice(3).trim().replace(',', '.');
     soma += limpPreco;
-    console.log('Number - ' + Number.parseInt(limpPreco));
+    console.log('Number - ' + limpPreco.toFixed(2));
 });
 console.log(Math.round(soma));
