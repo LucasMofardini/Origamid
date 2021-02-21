@@ -41,4 +41,24 @@ Math.floor(Math.random() * 500); // entre 0 e 500
 
 // Número random entre 72 e 32
 Math.floor(Math.random() * (72 - 32 + 1)) + 32;
-Math.floor(Math.random() * (max - min + 1)) + min;
+// Math.floor(Math.random() * (max - min + 1)) + min;
+
+console.log('----- Exercicio -----');
+// Retorne um número aleatório
+// entre 1050 e 2000
+console.log(Math.random() * (2000 - 1050 + 1) + 1050);
+// Retorne o maior número da lista abaixo
+const numeros = '4, 5, 20, 8, 9';
+
+// Crie uma função para limpar os preços
+// e retornar os números com centavos arredondados
+// depois retorne a soma total
+const listaPrecos = ['R$ 59,99', ' R$ 100,222', 'R$ 230  ', 'r$  200'];
+let soma = 0;
+listaPrecos.forEach((item) => {
+
+    limpPreco = +item.slice(3).trim().replace(',', '.');
+    soma += limpPreco;
+    console.log('Number - ' + Number.parseInt(limpPreco));
+});
+console.log(Math.round(soma));
