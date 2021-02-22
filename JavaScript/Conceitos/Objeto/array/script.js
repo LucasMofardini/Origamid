@@ -28,6 +28,8 @@ frutas[0].length; // 6
 frutas[1].length; // 5
 frutas[2].length; // 2
 
+//Metodos que modificam a array
+
 const instrumentos = ['Guitarra', 'Baixo', 'Violão'];
 instrumentos.sort(); // Ordem alfabetica
 
@@ -47,3 +49,51 @@ const ultimoCarro = carros.pop(); // 'Honda' // Remove o ultimo elemento e retor
 carros2; // ['Fiat', 'VW'];
 
 carros2.reverse(); //Inverte a ordem da array
+
+const carros3 = ['Ford', 'Fiat', 'VW', 'Honda'];
+carros3.splice(1, 0, 'Kia', 'Mustang'); // [] // Primeiro valor é o index,
+//O segundo é quantos itens vai remover, se passar 0 só adiciona itens
+carros3; // ['Ford', 'Kia', 'Mustang', 'Fiat', 'VW', 'Honda']
+
+carros3.splice(3, 2, 'Ferrari'); // ['Fiat', 'VW']
+carros3; // ['Ford', 'Kia', 'Mustang', 'Ferrari', 'Honda']
+
+
+console.log(['Item1', 'Item2', 'Item3', 'Item4', 'Item5'].copyWithin(2, 0, 3));
+//a partir do alvo, ele irá copiar a array começando do inicio até o final e vai preencher a mesma com essa cópia.
+
+console.log(['Item1', 'Item2', 'Item3', 'Item4'].fill('Banana', 1)); // preenche a partir Do index 1
+
+console.log(['Item1', 'Item2', 'Item3', 'Item4'].fill('Banana', 1, 3));
+//preenche a array de banana do index 1 ao 3, mas ele para no item anterior
+
+//Metodos de Acesso
+
+const transporte1 = ['Barco', 'Aviao'];
+const transporte2 = ['Carro', 'Moto'];
+const transportConcat = transporte1.concat(transporte2);
+console.log(transportConcat); // Barco aviao carro moto
+
+const linguagens = ['html', 'css', 'js', 'php', 'python', 'js'];
+linguagens.includes('css'); //true
+linguagens.includes('ruby'); // false
+linguagens.indexOf('python'); // 4
+linguagens.indexOf('js'); // 2
+linguagens.lastIndexOf('js'); // 5
+
+const linguagens2 = ['html', 'css', 'js', 'php', 'python'];
+linguagens2.join(); // 'html,css,js,php,python'
+linguagens2.join(' '); // 'html css js php python'
+linguagens2.join('-_-'); // 'html-_-css-_-js-_-php-_-python'
+
+let htmlString = '<h2>Título Principal</h2>'
+htmlString = htmlString.split('h2');
+// ['<', '>Título Principal</', '>']
+htmlString = htmlString.join('h1');
+// <h1>Título Principal</h1>
+
+const linguagens = ['html', 'css', 'js', 'php', 'python']; // Retorna itens
+linguagens.slice(3); // ['php', 'python'] // A partir do terceiro
+linguagens.slice(1, 4); // ['css', 'js', 'php'] até o quarto, nao inclui o index 4
+
+const cloneLinguagens = linguagens.slice();
