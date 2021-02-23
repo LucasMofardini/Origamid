@@ -92,8 +92,55 @@ htmlString = htmlString.split('h2');
 htmlString = htmlString.join('h1');
 // <h1>Título Principal</h1>
 
-const linguagens = ['html', 'css', 'js', 'php', 'python']; // Retorna itens
-linguagens.slice(3); // ['php', 'python'] // A partir do terceiro
-linguagens.slice(1, 4); // ['css', 'js', 'php'] até o quarto, nao inclui o index 4
+const linguagens3 = ['html', 'css', 'js', 'php', 'python']; // Retorna itens
+linguagens3.slice(3); // ['php', 'python'] // A partir do terceiro
+linguagens3.slice(1, 4); // ['css', 'js', 'php'] até o quarto, nao inclui o index 4
 
 const cloneLinguagens = linguagens.slice();
+
+console.log('----- Exercicios -----');
+
+const comidas = ['Pizza', 'Frango', 'Carne', 'Macarrão'];
+// Remova o primeiro valor de comidas e coloque em uma variável
+const removeF = comidas.shift();
+
+// Remova o último valor de comidas e coloque em uma variável
+const removeL = comidas.pop();
+
+// Adicione 'Arroz' ao final da array
+comidas.push('Arroz');
+// Adicione 'Peixe' e 'Batata' ao início da array
+comidas.unshift('Peixe', 'Batata');
+console.log(comidas);
+
+const estudantes = ['Marcio', 'Brenda', 'Joana', 'Kleber', 'Julia'];
+// Arrume os estudantes em ordem alfabética
+estudantes.sort();
+console.log(estudantes);
+// Inverta a ordem dos estudantes
+estudantes.reverse();
+console.log(estudantes);
+// Verifique se Joana faz parte dos estudantes
+console.log('Joana faz parte : ' + estudantes.includes('Joana'));
+// Verifique se Juliana faz parte dos estudantes
+console.log('Juliana faz parte : ' + estudantes.includes('Juliana'));
+
+let html = `<section>
+              <div>Sobre</div>
+              <div>Produtos</div>
+              <div>Contato</div>
+            </section>`
+    // Substitua section por ul e div com li,
+    // utilizando split e join
+html = html.split('section');
+html = html.join('ul')
+html = html.split('div');
+html = html.join('li')
+console.log(html);
+
+const carros4 = ['Ford', 'Fiat', 'VW', 'Honda'];
+// Remova o último carro, mas antes de remover
+// salve a array original em outra variável
+const carros5 = carros4.slice();
+carros4.pop();
+console.log(carros4, carros5);
