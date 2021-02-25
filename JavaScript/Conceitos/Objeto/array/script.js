@@ -144,3 +144,52 @@ const carros4 = ['Ford', 'Fiat', 'VW', 'Honda'];
 const carros5 = carros4.slice();
 carros4.pop();
 console.log(carros4, carros5);
+
+//ITERAÇÃO ARRAY
+
+//foreach
+const carros6 = ['Ford', 'Fiat', 'VW', 'Honda'];
+carros6.forEach((item) => {
+    console.log(item.toLocaleUpperCase());
+});
+const li1 = document.querySelectorAll('li');
+
+li1.forEach(i => i.classList.add('ativa'));
+
+li1.forEach(function(item) {
+    item.classList.add('ativa');
+});
+
+//Map
+carros6.map((item, index, array) => {
+    return item.toLocaleUpperCase();
+});
+//O retorno do map  é uma array
+
+const a = [1, 2, 34, 513, 132, 4, 45];
+const b = a.map((item) => {
+    return item * 2;
+});
+const aulas = [{
+        nome: 'HTML 1',
+        min: 15
+    },
+    {
+        nome: 'HTML 2',
+        min: 10
+    },
+    {
+        nome: 'CSS 1',
+        min: 20
+    },
+    {
+        nome: 'JS 1',
+        min: 25
+    },
+]
+const tAulas = aulas.map((item) => {
+    return item.min;
+});
+
+//Reduce
+const aulas2 = [10, 25, 30];
