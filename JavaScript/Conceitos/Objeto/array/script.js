@@ -240,3 +240,45 @@ const arraysCheias = frutas3.every((fruta) => {
 
 const num = [6, 43, 22, 88, 101, 29];
 const maiorQue3 = num.every(item => item > 3); // true
+
+//Find
+
+const frutas4 = ['Banana', 'Pêra', 'Uva', 'Maçã'];
+const buscaUva = frutas4.findIndex((fruta) => {
+    return fruta === 'Uva';
+}); // 2 // retorna o index do item
+
+const numeros = [6, 43, 22, 88, 101, 29];
+const buscaMaior45 = numeros.find(x => x > 45); // 88 //Apenas o primeiro
+
+//Filter
+const frutas7 = ['Banana', undefined, null, '', 'Uva', 0, 'Maçã'];
+const arrayLimpa = frutas7.filter((fruta) => {
+    return fruta;
+}); // ['Banana', 'Uva', 'Maçã'] //Filtra apenas os verdadeiros nesse caso
+
+const numeros1 = [6, 43, 22, 88, 101, 29];
+const buscaMaior45n = numeros1.filter(numero => numero > 45); // [88, 101]
+
+const aulas3 = [{
+        nome: 'HTML 1',
+        min: 15
+    },
+    {
+        nome: 'HTML 2',
+        min: 10
+    },
+    {
+        nome: 'CSS 1',
+        min: 20
+    },
+    {
+        nome: 'JS 1',
+        min: 25
+    },
+]
+
+const aulasMaiores = aulas3.filter((aula) => {
+    return aula.min >= 15;
+});
+// [{nome: 'CSS 1', min: 20}, {nome: 'JS 1', min: 25}]
