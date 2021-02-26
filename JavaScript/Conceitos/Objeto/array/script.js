@@ -193,3 +193,18 @@ const tAulas = aulas.map((item) => {
 
 //Reduce
 const aulas2 = [10, 25, 30];
+const aulaR = aulas2.reduce((acumulador, item) => {
+    console.log(acumulador, item);
+    return acumulador + item;
+}, 0); //Acumulador inicial , obrigatorio
+console.log(aulaR); // Resultado do reduce da aulaR = 65
+
+//Maior valor
+
+const nu = [2, 14, 132, 441, 231, 3, 12, 312, 45];
+
+const maiorNu = nu.reduce((anterior, atual) => {
+    return anterior > atual ? anterior : atual;
+
+}, 0);
+console.log(maiorNu); //441
