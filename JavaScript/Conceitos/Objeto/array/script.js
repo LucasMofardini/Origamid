@@ -282,3 +282,79 @@ const aulasMaiores = aulas3.filter((aula) => {
     return aula.min >= 15;
 });
 // [{nome: 'CSS 1', min: 20}, {nome: 'JS 1', min: 25}]
+
+console.log('----- Exercicio -----');
+
+// Selecione cada curso e retorne uma array
+// com objetos contendo o título, descricao,
+// aulas e horas de cada curso
+const curso = document.querySelectorAll('.curso');
+const arrayCurso = Array.from(curso);
+const obct = arrayCurso.map((item) => {
+    const obTitulo = item.querySelector('h1').innerText;
+    const obDesc = item.querySelector('p').innerText;
+    const obAulas = +item.querySelector('.aulas').innerText;
+    const obHoras = +item.querySelector('.horas').innerText;
+    const concat = {
+        titulo: obTitulo,
+        descriçao: obDesc,
+        aulas: obAulas,
+        horas: obHoras,
+    }
+
+    return concat
+});
+console.log(obct);
+// const rCurso = curso.reduce((acumulador, item, index) => {
+
+// }, {});
+
+
+// Retorne uma lista com os
+// números maiores que 100
+const numeros4 = [3, 44, 333, 23, 122, 322, 33];
+const Fnumeros = numeros4.filter((n) => {
+    return n > 100;
+});
+console.log(Fnumeros);
+
+// Verifique se Baixo faz parte
+// da lista de instrumentos e retorne true
+const instrumentos1 = ['Guitarra', 'Baixo', 'Bateria', 'Teclado']
+const sInstritrumento = instrumentos1.some((item) => {
+    return item === "Baixo";
+});
+console.log(sInstritrumento);
+// Retorne o valor total das compras
+const compras = [{
+        item: 'Banana',
+        preco: 'R$ 4,99'
+    },
+    {
+        item: 'Ovo',
+        preco: 'R$ 2,99'
+    },
+    {
+        item: 'Carne',
+        preco: 'R$ 25,49'
+    },
+    {
+        item: 'Refrigerante',
+        preco: 'R$ 5,35'
+    },
+    {
+        item: 'Quejo',
+        preco: 'R$ 10,60'
+    }
+]
+const rCompras = compras.reduce((acumulador, item, index) => {
+    pFinal = +item.preco.toUpperCase().replace('R$', ' ').replace(',', '.').trim();
+    return acumulador + pFinal;
+
+}, 0);
+console.log(rCompras);
+
+// const listaAulas = aulas.reduce((acumulador, atual, index) => {
+//     acumulador[index] = atual.nome;
+//     return acumulador;
+// }, {});
