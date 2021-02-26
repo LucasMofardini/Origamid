@@ -208,3 +208,35 @@ const maiorNu = nu.reduce((anterior, atual) => {
 
 }, 0);
 console.log(maiorNu); //441
+
+const listaAulas = aulas.reduce((acumulador, atual, index) => {
+    acumulador[index] = atual.nome;
+    return acumulador;
+}, {});
+//vai reduzir essa listaAulas a um objeto com todos os nomes
+
+const frutas2 = ['Banana', 'Pêra', 'Uva'];
+
+const frutasRight = frutas2.reduceRight((acc, fruta) => acc + ' ' + fruta);
+const frutasLeft = frutas2.reduce((acc, fruta) => acc + ' ' + fruta);
+
+frutasRight; // Uva Pêra Banana
+frutasLeft; // Banana Pêra Uva
+
+//Some
+const temUva = frutas2.some((fruta) => {
+    return fruta === 'Uva';
+}); // true
+//O retorno é True or False
+
+const frutas3 = ['Banana', 'Pêra', 'Uva', ''];
+
+// False pois pelo menos uma fruta
+// está vazia '', o que é um valor falsy
+const arraysCheias = frutas3.every((fruta) => {
+    return fruta; // false
+    //Todas as frutas são true? não, uma tem valor undefined
+});
+
+const num = [6, 43, 22, 88, 101, 29];
+const maiorQue3 = num.every(item => item > 3); // true
