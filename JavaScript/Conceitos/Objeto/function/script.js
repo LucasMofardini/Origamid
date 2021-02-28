@@ -75,3 +75,39 @@ const filtro = Array.prototype.filter.call(li1, function(item) {
     return item.classList.contains('ativo');
 });
 console.log(filtro);
+
+const numeros = [3, 4, 6, 1, 34, 44, 32];
+Math.max.apply(null, numeros); // 44 //Null pois nao muda o max do math
+Math.max.call(null, 3, 4, 5, 6, 7, 20);
+
+const li3 = document.querySelectorAll('li');
+
+const filtrarLi2 = Array.prototype.filter.bind(li3, function(item) {
+    return item.classList.contains('ativo');
+});
+
+filtrarLi2();
+
+const carro3 = {
+    marca: 'Ford',
+    ano: 2018,
+    acelerar: function(aceleracao, tempo) {
+        return `${this.marca} acelerou ${aceleracao} em ${tempo}`;
+    }
+}
+const honda = {
+    marca: 'Honda',
+
+}
+const acelerarHonda = carro3.acelerar.bind(honda);
+
+console.log(acelerarHonda(400, 20));
+
+function imc(altura, peso) {
+    return peso / (altura * altura);
+}
+
+const imc180 = imc.bind(null, 1.80);
+
+imc(1.80, 70); // 21.6
+imc180(70); // 21.6
