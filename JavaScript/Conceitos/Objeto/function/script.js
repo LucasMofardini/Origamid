@@ -111,3 +111,33 @@ const imc180 = imc.bind(null, 1.80);
 
 imc(1.80, 70); // 21.6
 imc180(70); // 21.6
+
+console.log('-----Exercicios-----');
+// Retorne a soma total de caracteres dos
+// parágrafos acima utilizando reduce
+const p = document.querySelectorAll('section p');
+const pA = Array.from(p);
+
+const listaP = pA.reduce((acumulador, item) => {
+    const qtdItem = item.innerHTML.length;
+    return qtdItem + acumulador;
+}, 0);
+console.log(listaP);
+
+// Crie uma função que retorne novos elementos
+// html, com os seguintes parâmetros
+// tag, classe e conteudo.
+
+function criarElemento(tag, classe, conteudo) {
+    const elemento = document.createElement(tag);
+    classe ? elemento.classList.add(classe) : null;
+    conteudo ? elemento.innerHTML = conteudo : null;
+    return elemento;
+}
+console.log(criarElemento('ul', 'ativo', 'Esse é'));
+
+// Crie uma nova função utilizando a anterior como base
+// essa nova função deverá sempre criar h1 com a
+// classe titulo. Porém o parâmetro conteudo continuará dinâmico
+
+const h1Titulo = criarElemento.bind(null, 'h1', 'titulo'); // Ja começa com h1 e titulo
