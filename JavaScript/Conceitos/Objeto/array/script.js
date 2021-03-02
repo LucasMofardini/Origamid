@@ -192,4 +192,7 @@ const tAulas = aulas.map((item) => {
 });
 
 //Reduce
-const aulas2 = [10, 25, 30];
+const n = [10, 25, 30];
+const rn = n.reduce((acumulador, item, index, array) => {
+
+});
