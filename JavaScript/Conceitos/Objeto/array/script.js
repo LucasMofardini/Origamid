@@ -192,7 +192,169 @@ const tAulas = aulas.map((item) => {
 });
 
 //Reduce
-const n = [10, 25, 30];
-const rn = n.reduce((acumulador, item, index, array) => {
+const aulas2 = [10, 25, 30];
+const aulaR = aulas2.reduce((acumulador, item) => {
+    console.log(acumulador, item);
+    return acumulador + item;
+}, 0); //Acumulador inicial , obrigatorio
+console.log(aulaR); // Resultado do reduce da aulaR = 65
 
+//Maior valor
+
+const nu = [2, 14, 132, 441, 231, 3, 12, 312, 45];
+
+const maiorNu = nu.reduce((anterior, atual) => {
+    return anterior > atual ? anterior : atual;
+
+}, 0);
+console.log(maiorNu); //441
+
+const listaAulas = aulas.reduce((acumulador, atual, index) => {
+    acumulador[index] = atual.nome;
+    return acumulador;
+}, {});
+//vai reduzir essa listaAulas a um objeto com todos os nomes
+
+const frutas2 = ['Banana', 'Pêra', 'Uva'];
+
+const frutasRight = frutas2.reduceRight((acc, fruta) => acc + ' ' + fruta);
+const frutasLeft = frutas2.reduce((acc, fruta) => acc + ' ' + fruta);
+
+frutasRight; // Uva Pêra Banana
+frutasLeft; // Banana Pêra Uva
+
+//Some
+const temUva = frutas2.some((fruta) => {
+    return fruta === 'Uva';
+}); // true
+//O retorno é True or False
+
+const frutas3 = ['Banana', 'Pêra', 'Uva', ''];
+
+// False pois pelo menos uma fruta
+// está vazia '', o que é um valor falsy
+const arraysCheias = frutas3.every((fruta) => {
+    return fruta; // false
+    //Todas as frutas são true? não, uma tem valor undefined
 });
+
+const num = [6, 43, 22, 88, 101, 29];
+const maiorQue3 = num.every(item => item > 3); // true
+
+//Find
+
+const frutas4 = ['Banana', 'Pêra', 'Uva', 'Maçã'];
+const buscaUva = frutas4.findIndex((fruta) => {
+    return fruta === 'Uva';
+}); // 2 // retorna o index do item
+
+const numeros = [6, 43, 22, 88, 101, 29];
+const buscaMaior45 = numeros.find(x => x > 45); // 88 //Apenas o primeiro
+
+//Filter
+const frutas7 = ['Banana', undefined, null, '', 'Uva', 0, 'Maçã'];
+const arrayLimpa = frutas7.filter((fruta) => {
+    return fruta;
+}); // ['Banana', 'Uva', 'Maçã'] //Filtra apenas os verdadeiros nesse caso
+
+const numeros1 = [6, 43, 22, 88, 101, 29];
+const buscaMaior45n = numeros1.filter(numero => numero > 45); // [88, 101]
+
+const aulas3 = [{
+        nome: 'HTML 1',
+        min: 15
+    },
+    {
+        nome: 'HTML 2',
+        min: 10
+    },
+    {
+        nome: 'CSS 1',
+        min: 20
+    },
+    {
+        nome: 'JS 1',
+        min: 25
+    },
+]
+
+const aulasMaiores = aulas3.filter((aula) => {
+    return aula.min >= 15;
+});
+// [{nome: 'CSS 1', min: 20}, {nome: 'JS 1', min: 25}]
+
+console.log('----- Exercicio -----');
+
+// Selecione cada curso e retorne uma array
+// com objetos contendo o título, descricao,
+// aulas e horas de cada curso
+const curso = document.querySelectorAll('.curso');
+const arrayCurso = Array.from(curso);
+const obct = arrayCurso.map((item) => {
+    const obTitulo = item.querySelector('h1').innerText;
+    const obDesc = item.querySelector('p').innerText;
+    const obAulas = +item.querySelector('.aulas').innerText;
+    const obHoras = +item.querySelector('.horas').innerText;
+    const concat = {
+        titulo: obTitulo,
+        descriçao: obDesc,
+        aulas: obAulas,
+        horas: obHoras,
+    }
+
+    return concat
+});
+console.log(obct);
+// const rCurso = curso.reduce((acumulador, item, index) => {
+
+// }, {});
+
+
+// Retorne uma lista com os
+// números maiores que 100
+const numeros4 = [3, 44, 333, 23, 122, 322, 33];
+const Fnumeros = numeros4.filter((n) => {
+    return n > 100;
+});
+console.log(Fnumeros);
+
+// Verifique se Baixo faz parte
+// da lista de instrumentos e retorne true
+const instrumentos1 = ['Guitarra', 'Baixo', 'Bateria', 'Teclado']
+const sInstritrumento = instrumentos1.some((item) => {
+    return item === "Baixo";
+});
+console.log(sInstritrumento);
+// Retorne o valor total das compras
+const compras = [{
+        item: 'Banana',
+        preco: 'R$ 4,99'
+    },
+    {
+        item: 'Ovo',
+        preco: 'R$ 2,99'
+    },
+    {
+        item: 'Carne',
+        preco: 'R$ 25,49'
+    },
+    {
+        item: 'Refrigerante',
+        preco: 'R$ 5,35'
+    },
+    {
+        item: 'Quejo',
+        preco: 'R$ 10,60'
+    }
+]
+const rCompras = compras.reduce((acumulador, item, index) => {
+    pFinal = +item.preco.toUpperCase().replace('R$', ' ').replace(',', '.').trim();
+    return acumulador + pFinal;
+
+}, 0);
+console.log(rCompras);
+
+// const listaAulas = aulas.reduce((acumulador, atual, index) => {
+//     acumulador[index] = atual.nome;
+//     return acumulador;
+// }, {});
