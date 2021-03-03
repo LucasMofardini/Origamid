@@ -131,4 +131,20 @@ Object.preventExtensions(car); // igual o seal mas deixa deletar as propriedades
 
 Object.isFrozen(car); // true
 Object.isSealed(car); // true
-Object.isExtensible(car); // true
+Object.isExtensible(car); // false //deixa estensão
+
+const frut = ['Banana', 'Uva'];
+frut.constructor; // Array
+
+const frase1 = 'Isso é uma String';
+frase1.constructor; // String
+
+frut.hasOwnProperty('map'); // false
+Array.hasOwnProperty('map'); // false
+Array.prototype.hasOwnProperty('map'); // true
+
+Array.prototype.propertyIsEnumerable('map'); // false
+window.propertyIsEnumerable('innerHeight'); // true
+
+
+Array.prototype.isPrototypeOf(frut); // true
