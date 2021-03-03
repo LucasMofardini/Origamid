@@ -148,3 +148,54 @@ window.propertyIsEnumerable('innerHeight'); // true
 
 
 Array.prototype.isPrototypeOf(frut); // true
+
+
+// Object.prototype.toString.call(li); // [object NodeList]
+
+console.log('-----Exercicios-----');
+
+// Crie uma função que verifique
+// corretamente o tipo de dado
+function verifica(type) {
+    return Object.prototype.toString.call(type)
+}
+console.log(verifica(' '));
+// Crie um objeto quadrado com
+// a propriedade lados e torne
+// ela imutável
+const quadrado = {}
+Object.defineProperties(quadrado, {
+    lados: {
+        value: 10,
+        configurable: false,
+    }
+});
+
+// Previna qualquer mudança
+// no objeto abaixo
+const configuracao = {
+    width: 800,
+    height: 600,
+    background: '#333',
+
+};
+Object.freeze(configuracao); // Nao muda nunca
+// Object.defineProperties(configuracao, {
+//     width: {
+//         value: 800,
+//         configurable: false,
+//     },
+//     height: {
+//         value: 600,
+//         configurable: false,
+//     },
+//     background: {
+//         value: '#333',
+//         configurable: false,
+//     },
+// });
+// Liste o nome de todas
+// as propriedades do
+// protótipo de String e Array
+console.log(Object.getOwnPropertyNames(Array.prototype));
+console.log(Object.getOwnPropertyNames(String.prototype));
