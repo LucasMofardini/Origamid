@@ -1,3 +1,7 @@
+[data-cor] {
+    background-color: blue;
+}
+
 body,
 h1,
 h2,
@@ -104,6 +108,10 @@ body {
     grid-column: 2;
 }
 
+.animais-lista li {
+    cursor: pointer;
+}
+
 .animais-lista::-webkit-scrollbar {
     width: 18px;
 }
@@ -136,6 +144,7 @@ body {
     margin-top: 2rem;
     margin-bottom: .5rem;
     color: #E54;
+    cursor: pointer;
 }
 
 .faq-lista dt::before {
@@ -217,4 +226,64 @@ body {
     .copy {
         margin-bottom: 0px;
     }
+}
+
+.js .js-tabcontent section {
+    display: none;
+}
+
+.js .js-tabcontent section.ativo {
+    display: block!important;
+    animation: show 0.5s forwards;
+}
+
+@keyframes show {
+    from {
+        opacity: 0;
+        transform: translate3d(-30px, 0, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.js .js-accordion dd {
+    display: none;
+}
+
+.js .js-accordion dt:after {
+    content: '⮧';
+    margin-left: 10px;
+}
+
+.js .js-accordion dt.ativo:after {
+    content: '⮥';
+}
+
+.js .js-accordion dd.ativo {
+    display: block;
+    animation: slidedown forwards 0.5s;
+}
+
+@keyframes slidedown {
+    from {
+        opacity: 0;
+        max-height: 0;
+    }
+    to {
+        max-height: 200px;
+        opacity: 1;
+    }
+}
+
+.js .js-scroll {
+    opacity: 0;
+    transform: translate3d(-30px, 0, 0);
+    transition: .3s;
+}
+
+.js .js-scroll.ativo {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
 }
