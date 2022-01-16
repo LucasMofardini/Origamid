@@ -17,7 +17,9 @@ let i = 0;
 let timer;
 
 const input = document.querySelector('input[data-input]');
-
+const iniciarBtn = document.querySelector('[data-cronometro="inicia"]');
+const resetaBtn = document.querySelector('[data-cronometro="reseta"]');
+console.log(resetaBtn);
 const dataCronometro = document.querySelectorAll('[data-cronometro]');
 dataCronometro.forEach((item) => {
     item.addEventListener('click', handleClick);
@@ -25,13 +27,13 @@ dataCronometro.forEach((item) => {
     if (item.dataset.cronometro === 'pausa') {
         item.addEventListener('dblclick', resetaTempo);
     }
+
 });
 
 
 
 function handleClick(event) {
     event.preventDefault;
-
     if (event.target.dataset.cronometro === 'inicia') {
         iniciaTempo();
     }
@@ -46,13 +48,18 @@ function handleClick(event) {
 function iniciaTempo() {
     timer = setInterval(() => {
         input.value = i++;
-    }, 1000)
+    }, 1000);
+    iniciarBtn.setAttribute('disabled', '');
+
+
 }
 function pausaTempo() {
     clearInterval(timer);
+
 }
 function resetaTempo() {
     clearInterval(timer);
     i = 0;
     input.value = 0;
+    iniciarBtn.removeAttribute('disabled', '');
 }
