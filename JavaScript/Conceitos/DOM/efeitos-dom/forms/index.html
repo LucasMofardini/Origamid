@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <form name="contato" id="contato">
+    <label for="nome">Nome</label>
+    <input type="text" name="nome" required>
+    <span class="erro"></span>
+
+
+    <label for="email">Email</label>
+    <input type="email" name="email" required>
+    <span class="erro"></span>
+
+    <label for="mensagem">Mensagem</label>
+    <textarea name="mensagem" id="mensagem"></textarea>
+
+
+  </form>
+
+  <span class="texto"></span>
+
+  <form name="select" id="select">
+    <select name="cores" id="cores">
+      <option value="white">Branco</option>
+      <option value="blue">Azul</option>
+      <option value="red">Vermelho</option>
+
+    </select>
+  </form>
+
+  <form name="tipos" id="tipos">
+    <input type="color" name="color">
+    <input type="date">
+    <input type="number">
+    <input type="range">
+    <input type="password">
+
+    <Label for="identidade"> Possui identidade ?</Label>
+    <input type="checkbox" id="identidade" value="sim">
+    <span></span>
+    <label for="guitarra">guitarra</label>
+    <input type="radio" name="instrumentos" value="guitarra" id="guitarra">
+
+    <label for="baixo">baixo</label>
+    <input type="radio" name="instrumentos" value="baixo" id="baixo">
+
+  </form>
+</body>
+
+</html>
+<script>
+  const contato = document.querySelector('#contato');
+  const texto = document.querySelector('.texto');
+
+  function handleKeyUp(event) {
+    if (!event.target.checkValidity()) {
+      event.target.classList.add('invalido');
+      event.target.nextElementSibling.innerText = event.target.validationMessage;
+    } else {
+      event.target.nextElementSibling.innerText = "";
+      event.target.classList.remove('invalido');
+
+    }
+    texto.innerText = event.target.value;
+  }
+
+  contato.addEventListener('keyup', handleKeyUp);
+
+  // _______________ //
+
+  const select = document.querySelector('#select');
+
+  select.addEventListener('change', (event) => {
+    document.body.style.background = event.target.value;
+  });
+
+  // ________________ //
+
+  const tipos = document.querySelector('#tipos');
+
+  tipos.addEventListener('change', (event) => {
+    // console.log(event.target.value);
+
+    if (event.target == tipos.identidade) {
+
+      if (event.target.checked) {
+        event.target.nextElementSibling.innerText = event.target.value;
+      } else {
+        event.target.nextElementSibling.innerText = "";
+
+      }
+    }
+    if (event.target == tipos.color) {
+      document.body.style.background = event.target.value;
+    }
+    console.log(event.target.value);
+
+  });
+
+  // ________________ //
+
+  const dadosContato = {};
+
+
+  contato.addEventListener('change', (event) => {
+    dadosContato[event.target.name] = event.target.value;
+    console.log(dadosContato)
+  });
+
+
+</script>
+<style>
+  label {
+    display: block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    margin-top: 1rem;
+  }
+
+  form {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 2px solid black;
+    margin-bottom: 0.5rem;
+  }
+
+  textarea {
+    height: 150px;
+  }
+
+  .invalido {
+    border-color: red;
+  }
+</style>
