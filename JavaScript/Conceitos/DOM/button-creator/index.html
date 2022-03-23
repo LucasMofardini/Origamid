@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Button Creator</title>
+</head>
+
+<body>
+    <section class="button-creator">
+        <form id="controles">
+            <label for="texto">texto</label>
+            <input name="texto" id="texto" type="text">
+
+            <label for="color">color</label>
+            <input name="color" id="color" type="color">
+
+            <label for="backgroundColor">backgroundColor</label>
+            <input name="backgroundColor" id="backgroundColor" type="color">
+
+            <label for="height">height</label>
+            <input name="height" id="height" type="range" min="0" max="200">
+
+            <label for="width">width</label>
+            <input name="width" id="width" type="range" min="0" max="600">
+
+            <label for="border">border</label>
+            <input name="border" id="border" type="text">
+
+            <label for="borderRadius">borderRadius</label>
+            <input name="borderRadius" id="borderRadius" type="range" min="0" max="20">
+
+            <select name="fontFamily">
+                <option value="Arial">
+                    Arial
+                </option>
+                <option value="Georgia">
+                    Georgia
+                </option>
+                <option value="monospace">
+                    MonoSpace
+                </option>
+            </select>
+
+            <label for="fontSize">font-size</label>
+            <input name="fontSize" id="fontSize" type="number">
+        </form>
+        <section class="resultado">
+            <button class="btn">Clique</button>
+            <pre>
+                <code class="css">
+                    
+                </code>
+            </pre>
+        </section>
+    </section>
+
+</body>
+
+<script src="./script.js"></script>
+
+</html>
