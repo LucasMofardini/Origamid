@@ -2,6 +2,7 @@ const controles = document.getElementById('controles');
 const cssText = document.querySelector('.css');
 const btn = document.querySelector('.btn');
 
+const btnCopiar = document.querySelector('.btn-cp');
 const handleStyle = {
     element: btn,
     texto(value) {
@@ -48,4 +49,10 @@ function showCss() {
         btn.style.cssText.split('; ')
             .join(';</span><span>');
 }
+function copiaCode() {
+    const code = document.querySelector('.css').innerText;
+    console.log(code);
+    navigator.clipboard.writeText(code);
+}
 controles.addEventListener('change', handleChange);
+btnCopiar.addEventListener('click', copiaCode);
