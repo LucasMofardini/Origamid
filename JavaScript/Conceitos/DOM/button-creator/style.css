@@ -25,15 +25,39 @@ input{
     border-radius: 4px;
     box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.1);
 }
+pre{
+    margin: 0;
+    padding: 0;
+}
+.btn{
+    margin: 10px 0;
+}
 .css{
     font-family: 'IBM Plex Mono', monospace;
-    color: #333;
-    margin-top:40px;
+    color: #eee;
+    background-color: #333;
+    margin-top:0px;
     display: flex;
     flex-direction: column;
+
+    padding: 10px 10px;
+    box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.1);
+    border-top: 1px solid #ccc;
 }
 .css span{
     display: block;
     margin-bottom: 0.5rem;
+}
+
+.text-code{
+    display: flex;
+
+    width: auto;
+    border: 1px solid #333;
+    background: #333;
+    color: #eee;
+    padding: 2px 10px;
+
+    font-family: 'IBM Plex Mono', monospace;
 
 }
