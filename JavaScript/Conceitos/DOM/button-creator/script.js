@@ -65,7 +65,7 @@ function resetBtn() {
 
     btn.removeAttribute('style');
     localStorage.clear();
-
+    document.location.reload();
 }
 function saveValues(name, value) {
     localStorage[name] = value;

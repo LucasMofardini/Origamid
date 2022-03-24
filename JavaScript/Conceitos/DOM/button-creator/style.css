@@ -35,6 +35,8 @@ select{
     grid-gap: 30px ;
     padding: 30px;
     grid-template-columns: 200px 1fr;
+    display: flex;
+    flex-wrap: wrap;
 }
 #controles{
     font-family: 'IBM Plex Mono', monospace;
