@@ -41,6 +41,7 @@ function handleChange(event) {
     const value = event.target.value;
 
     handleStyle[name](value);
+    saveValues(name, value);
     showCss();
 
 }
@@ -54,7 +55,6 @@ function showCss() {
 function copiaCode() {
     const code = document.querySelector('.css').innerText;
     navigator.clipboard.writeText(code);
-    console.log(navigator);
     btnCopiar.innerText = 'copiado!';
     setTimeout(() => {
         btnCopiar.innerText = 'copiar';
@@ -64,8 +64,26 @@ function resetBtn() {
     cssText.innerText = '';
 
     btn.removeAttribute('style');
+    localStorage.clear();
 
 }
+function saveValues(name, value) {
+    localStorage[name] = value;
+
+}
+console.log(controles.elements)
+function setValues() {
+    const properties = Object.keys(localStorage);
+    properties.forEach((propertie) => {
+        // seta os valores do botao
+        handleStyle[propertie](localStorage[propertie]);
+        // seta os valores do controle
+        controles.elements[propertie].value = localStorage[propertie];
+    });
+    showCss();
+}
+setValues();
+
 controles.addEventListener('change', handleChange);
 btnCopiar.addEventListener('click', copiaCode);
 btnReset.addEventListener('click', resetBtn);
