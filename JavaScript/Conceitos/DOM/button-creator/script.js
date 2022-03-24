@@ -3,6 +3,8 @@ const cssText = document.querySelector('.css');
 const btn = document.querySelector('.btn');
 
 const btnCopiar = document.querySelector('.btn-cp');
+const btnReset = document.querySelector('.btn-reset');
+
 const handleStyle = {
     element: btn,
     texto(value) {
@@ -51,8 +53,19 @@ function showCss() {
 }
 function copiaCode() {
     const code = document.querySelector('.css').innerText;
-    console.log(code);
     navigator.clipboard.writeText(code);
+    console.log(navigator);
+    btnCopiar.innerText = 'copiado!';
+    setTimeout(() => {
+        btnCopiar.innerText = 'copiar';
+    }, 4000);
+}
+function resetBtn() {
+    cssText.innerText = '';
+
+    btn.removeAttribute('style');
+
 }
 controles.addEventListener('change', handleChange);
 btnCopiar.addEventListener('click', copiaCode);
+btnReset.addEventListener('click', resetBtn);

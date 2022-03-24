@@ -126,3 +126,12 @@ pre{
    background-color: rgba(0,0,0,0.8);
    color: #eee;
 }
+.btn-reset{
+    font-size: 10px;
+    background-color: #ccc;
+    color: #333;
+    padding: 2px 4px;
+    cursor: pointer;
+    user-select:none ;
+    border: none;
+}
