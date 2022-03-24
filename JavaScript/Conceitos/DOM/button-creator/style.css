@@ -37,6 +37,8 @@ select{
     grid-template-columns: 200px 1fr;
     display: flex;
     flex-wrap: wrap;
+
+    position: relative;
 }
 #controles{
     font-family: 'IBM Plex Mono', monospace;
@@ -136,4 +138,15 @@ pre{
     cursor: pointer;
     user-select:none ;
     border: none;
+}
+#lucasmofardini{
+    position: absolute;
+    top: 15px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 500;
+    padding: 4px 6px;
+    background-color: #333;
+    color: #eee;
+    cursor: pointer;
+    text-decoration: none;
 }
