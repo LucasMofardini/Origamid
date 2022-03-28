@@ -1,0 +1,62 @@
+body{
+    padding: 0;
+    margin: 0;
+
+    font-family: 'IBM Plex Mono', monospace;
+
+}
+.conteudo-cep{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aqua;
+    height: 100vh;
+}
+#form-cep{
+    background-color: cadetblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 300px;
+
+    border: 2px solid antiquewhite;
+
+    box-shadow: 10px 10px 20px cadetblue;
+
+}
+input[type="text"]{
+    border: 1px solid #333;
+    margin: 10px 0;
+    height: 30px;
+    width: 150px;
+    background-color: #333;
+    color: antiquewhite;
+    border: 2px solid antiquewhite;
+    padding: 0 5px;
+    font-size: 14px;
+    font-family: 'IBM Plex Mono', monospace;
+}
+
+input[type="button"]{
+    background-color: #333;
+    border: 2px solid antiquewhite;
+    margin: 10px 0;
+    padding: 10px 20px;
+    color: antiquewhite;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.2s;
+    font-family: 'IBM Plex Mono', monospace;
+
+
+}
+input[type="button"]:hover{
+    transform: scale(1.1);
+
+}
+label{
+    margin-top:  10px;
+    color: #333;
+    font-size: 20px;
+}
