@@ -1,0 +1,35 @@
+body{
+    padding: 0;
+    margin: 0;
+
+    background-color: antiquewhite;
+
+    font-family: 'Courier New', Courier, monospace;
+
+}
+.conteudo-bitCoin{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    flex-direction: column;
+}
+#piada{
+    max-width: 400px;
+}
+button{
+    border: none;
+    background: transparent;
+    padding: 4px 14px;
+    cursor: pointer;
+    background: #333;
+    color: white;
+    font-family:'Courier New', Courier, monospace;
+
+    transition: 0.2s;
+
+}
+button:hover{
+    transform: scale(1.1);
+}
