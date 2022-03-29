@@ -1,0 +1,23 @@
+body{
+    padding: 0;
+    margin: 0;
+
+    background-color: antiquewhite;
+}
+.conteudo-bitCoin{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    flex-direction: column;
+}
+#texto-bitCoin{
+    font-size: 40px;
+    font-family: 'Courier New', Courier, monospace;
+
+}
+#preco-bitCoin{
+    font-size: 40px;
+    font-family: 'Courier New', Courier, monospace;
+}

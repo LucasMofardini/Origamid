@@ -1,4 +1,6 @@
-
+// Utilizando a API https://viacep.com.br/ws/${CEP}/json/
+// crie um formulário onde o usuário pode digitar o cep
+// e o endereço completo é retornado ao clicar em buscar
 
 const formCep = document.querySelector('#form-cep');
 const btnBuscar = document.querySelector('#btn-buscar');
@@ -26,8 +28,6 @@ function buscaCep() {
     } else {
         console.error('Cep Vazio');
     }
-
-
 }
 
 btnBuscar.addEventListener('click', buscaCep);
