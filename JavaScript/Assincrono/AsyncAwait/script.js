@@ -12,6 +12,7 @@ async function puxarDados() {
 }
 
 puxarDados();
+
 // INICIA FETCH AO MESMO TEMPO
 
 async function puxarDados2() {
