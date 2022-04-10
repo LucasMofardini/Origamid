@@ -129,3 +129,32 @@ class NewButton {
 }
 
 const newButton = new NewButton('Comprar', 'blue');
+
+// Extends
+// Sempre que usar construtor extendendo de outra classe, precisa usar o super
+class Veiculo {
+    constructor(rodas) {
+        this.rodas = rodas;
+    }
+    acelerar() {
+        console.log('Veiculo Acelerou');
+    }
+}
+class Carro extends Veiculo {
+    constructor(rodas, cinto) {
+        super(rodas);
+        this.cinto = cinto;
+    }
+    freiar() {
+        console.log('Carro Freiou com ' + this.rodas + " rodas");
+    }
+    acelerar() {
+        // Usa o metodo do pai, que é o veiculo
+        super.acelerar();
+        console.log('Carro Acelerou');
+    }
+}
+
+const ford = new Carro(4, true);
+const honda = new Veiculo(2);
+
