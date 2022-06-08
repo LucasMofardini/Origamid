@@ -1,28 +1,102 @@
+.container {
+    max-width: 1100px;
+    
+    /* grid-template-columns: repeat(4, 1fr); */
+    /* grid-template-rows: 50px; */
+    margin: 0 auto;
+    border: 1px solid #ccc;
+}
+.teste-1{
+      grid-template-areas: 
+     "grande grande item-1 item-2"
+     "grande grande item-1 item-2"
+     "grande grande item-3 item-4"
+     "item-5 item-6 item-3 item-4"
+     "item-5 item-6 item-7 item-8"
+     "vazio vazio   item-7 item-8";
+}
+.teste-2{
+    grid-template-areas: 
+    "grande grande item-1 item-2"
+    "grande grande item-3 item-4"
+    "item-5 item-6 item-7 item-8";
+}
+
+.container.grid .maior {
+    grid-area: grande;
+    /* só pra centralizar */
+}
+.container.grid .item-1{
+    grid-area: item-1;
+}
+.container.grid .item-2{
+    grid-area: item-2;
+}
+.container.grid .item-3{
+    grid-area: item-3;
+}
+.container.grid .item-4{
+    grid-area: item-4;
+}
+.container.grid .item-5{
+    grid-area: item-5;
+}
+.container.grid .item-6{
+    grid-area: item-6;
+}
+.container.grid .item-7{
+    grid-area: item-7;
+}
+.container.grid .item-8{
+    grid-area: item-8;
+}
+
+/* Teste Flex */
+.teste-3{
+    max-width: 800px !important;
+}
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+}
+.sub-item-1{
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.teste-3 .item{
+    width: calc(25% - 10px);
+    height: 30px;
+}
+.sub-item-1 .item{
+    width: calc(50% - 10px);
+    height: calc(50px - 5px);
+}
+.sub-item-2{
+    width: 50%;
+}
+.sub-item-3{
+    display: flex;
+}
+.sub-item-3 .item{
+    width: calc(50% - 10px);
+    height: calc(50px - 5px);
+}
+.teste-3 .maior{
+    width: calc(100% - 10px);
+    height: 75px;
+}
+
 /* Grid Container */
 
 .grid {
     display: grid;
 }
 
-.grid-template-columns {
-    grid-template-columns: 200px 200px;
+.grid .item{
+    padding: 5px;
 }
-
-.grid-template-columns-3 {
-    grid-template-columns: 1fr 2fr 1fr;
-}
-
-.subgrid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 10px;
-}
-
-.subgrid>div {
-    background: rgba(0, 0, 0, .3);
-}
-
-
 /* Estilos Gerais */
 
 .item {
@@ -30,10 +104,14 @@
     background: tomato;
     text-align: center;
     font-size: 1.5em;
+
+    display: flex;  
+    align-items: center;
+    justify-content: center;
 }
 
 .grid {
-    max-width: 400px;
+    max-width: 800px;
     margin: 0 auto;
     border: 1px solid #ccc;
 }
