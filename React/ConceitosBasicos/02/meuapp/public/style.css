@@ -103,3 +103,9 @@ hr {
   border: 2px solid black;
   margin: 2rem auto;
 }
+.container{
+  border: 1px solid black;
+  padding: 10px 20px;
+  border-radius: 10px;
+  margin: 10px 0;
+}
