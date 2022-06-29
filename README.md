@@ -16,10 +16,10 @@ projetos com o JQuery;
 
  * ### React
  ```
-Pausa no React para fazer o Js ES6
+Retomei o curso de React
  ```
  
  * ### JavaScript ES6
  ```
-Iniciando Js ES6+
+Fiz cerca de 70% do curso e pretendo termina-lo
  ```
