@@ -3,6 +3,7 @@ import Aula207 from './207';
 import Exercicio207 from './Exercicio207'
 import Aula208 from './208'
 import Exercicio208 from './Exercicio208';
+import Aula209 from './209'
 
 
 const App = () => {
@@ -15,6 +16,8 @@ const App = () => {
 
       <div className="container"><Aula208></Aula208></div>
       <div className="container"><Exercicio208></Exercicio208></div>
+
+      <div className="container"><Aula209></Aula209></div>
 
     </>
   );
