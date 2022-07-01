@@ -6,27 +6,30 @@ import React from "react";
 // Dica: const { pathname } = window.location; (puxa o caminho do URL)
 
 
-
 const Exercicio212 = () => {
   const { pathname } = window.location;
-  let ehProdutos = false;
+  let pagina = '/';
 
-  if(pathname == '/Produtos'){
-    ehProdutos = true;
+  if(pathname == '/produtos'){
+    pagina = '/produtos';
   }
   return (
       <>
-        <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/Produtos">Produtos</a></li>
-        </ul>
-      {ehProdutos && <Produtos corTitulo="green"/>}
+        <Header/>
+        {pagina === '/produtos' && <Produtos corTitulo="#4c8b64"/>}
       </>
   );
 };
 
 export default Exercicio212;
-
+const Header = () => {
+  return(
+    <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/produtos">Produtos</a></li>
+    </ul>
+  )
+}
 const Produtos = ({corTitulo}) =>{
   const produtos = [
     { nome: 'Notebook', propriedades: ['16gb ram', '512gb'] },

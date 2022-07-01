@@ -35,3 +35,15 @@ const App = () => {
 }
 
 export default App;
+
+// Exemplo de desestruturação
+
+// const teste = {
+//   Produtos: 4,
+//   Quantidade: 2,
+//   Rolamentos: 'Rolamentos de carros esportivos'
+// }
+
+// const { Rolamentos, Quantidade } = teste;
+// console.log(Rolamentos, Quantidade);
+// console.log(teste.Rolamentos, teste.Quantidade);
