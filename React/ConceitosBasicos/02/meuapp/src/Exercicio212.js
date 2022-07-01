@@ -8,15 +8,16 @@ import React from "react";
 
 const Exercicio212 = () => {
   const { pathname } = window.location;
-  let pagina = '/';
+  let Pagina = Home;
 
   if(pathname == '/produtos'){
-    pagina = '/produtos';
+    Pagina = Produtos;
   }
   return (
       <>
         <Header/>
-        {pagina === '/produtos' && <Produtos corTitulo="#4c8b64"/>}
+        <Pagina/>
+
       </>
   );
 };
@@ -30,14 +31,23 @@ const Header = () => {
     </ul>
   )
 }
-const Produtos = ({corTitulo}) =>{
+const Home = () => {
+  return(
+    <>
+      <Titulo>Home</Titulo>
+      <p>Essa é a home</p>
+
+    </>
+  )
+}
+const Produtos = () =>{
   const produtos = [
     { nome: 'Notebook', propriedades: ['16gb ram', '512gb'] },
     { nome: 'Smartphone', propriedades: ['2gb ram', '128gb'] },
     ];
   return(
     <>
-      <h2 style={{color: corTitulo}}>Produtos</h2>
+      <Titulo>Produtos</Titulo>
       {produtos.map((produto)=>{
           return(
              <ProdutoItem
@@ -68,4 +78,10 @@ return(
     </div>
   </>
 )
+}
+
+const Titulo = ({children}) =>{
+  return (
+    <h2 style={{color: '#4c8b64'}}>{children}</h2>
+  )
 }
