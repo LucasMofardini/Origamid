@@ -7,15 +7,17 @@ const Aula209 = () => {
   function handleScroll(e){
     console.log(e)
   }
-  function handleTeste(text1, text2){
-    console.log(text1, text2);
+  function handleTeste(event,text1, text2){
+    console.log(text1, text2, event.target);
   }
   // window.addEventListener('scroll', handleScroll);
   return (
     <>
       <button onClick={handleClick}>Camisa</button>
       <button onClick={({target})=>{console.log(target)}}>Bermuda</button>
-      <button onClick={()=>{handleTeste('a', 'b')}}>Teste</button>
+      <button onClick={(event)=>{
+        handleTeste(event,'a', 'b')
+        }}>Teste</button>
 
     </>
   );
