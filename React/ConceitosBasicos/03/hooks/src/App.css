@@ -36,3 +36,33 @@
     transform: rotate(360deg);
   }
 }
+
+.response-url{
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.container-product{
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  width: 300px;
+  display: flex;
+  justify-content: center;
+}
+.container-product .img-photo{
+  width: 200px;
+  border-radius: 5px;
+}
+.container-product h3, .container-product h4 {
+  text-align: center;
+}
+.container-product small{
+  display: block;
+  margin: 15px 0;
+}
+.container-product .item-desc{
+  width: 200px;
+}
+.container-product .item-desc p{
+  text-align: left;
+}
