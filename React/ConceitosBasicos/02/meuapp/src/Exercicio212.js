@@ -13,11 +13,11 @@ const Exercicio212 = () => {
   if(pathname == '/produtos'){
     Pagina = Produtos;
   }
+  
   return (
       <>
         <Header/>
         <Pagina/>
-
       </>
   );
 };
