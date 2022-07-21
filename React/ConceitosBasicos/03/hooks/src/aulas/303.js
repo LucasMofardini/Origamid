@@ -25,7 +25,7 @@ function Aula303 (){
         <>
             <p>{notificacao}</p>
             <ul>
-                {comentarios.map((item)=><li key={item}>{item}</li>)}
+                {comentarios.map((item, index)=><li key={item + index}>{item}</li>)}
             </ul>
             <input ref={inputElement} value={input} onChange={(e)=> setInput(e.target.value)}/>
             <br/>
