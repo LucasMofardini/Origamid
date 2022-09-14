@@ -5,6 +5,7 @@ import Aula302 from './aulas/302';
 import Exercicio302 from './exercicios/exercicio302';
 import Aula303 from './aulas/303';
 import Aula304 from './aulas/304';
+import Aula305 from './aulas/305/305';
 
 function App() {
 
@@ -34,7 +35,11 @@ function App() {
             <h2>304 - useMemo e useCallback </h2>
             <Aula304/>
           </div>
-        </>
+          <div className='container'>
+            <h2>305 - useContext </h2>
+            <Aula305/>
+          </div>
+          </>
   );
 }
 
