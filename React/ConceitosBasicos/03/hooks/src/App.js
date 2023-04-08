@@ -7,6 +7,7 @@ import Aula303 from './aulas/303';
 import Aula304 from './aulas/304';
 import Aula305 from './aulas/305/305';
 import Exercicio305 from './exercicios/Exercicio305/Exercicio305';
+import Aula306 from './aulas/306';
 
 function App() {
 
@@ -43,6 +44,10 @@ function App() {
           <div className='container'>
             <h2>Exercicio 305 - UseContext </h2>
             <Exercicio305/>
+          </div>
+          <div className='container'>
+            <h2>Aula 306 - Custom Hook </h2>
+            <Aula306/>
           </div>
           </>
   );
