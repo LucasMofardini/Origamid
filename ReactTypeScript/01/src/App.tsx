@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import Button from "./Button";
 import Input from "./Input";
 import Checkbox from "./Checkbox";
+import UseStateExample from "./UseStateExample";
+import ExercicioUseState from "./UseStateExercicio";
+
 function App() {
   // O ts infere que o tipo. Ex: useState.
   const [total, setTotal] = useState(0);
@@ -26,6 +29,14 @@ function App() {
 
       <section>
        <Checkbox label="Termos e Condições" />
+      </section>
+      
+      <section>
+        <UseStateExample />
+      </section>
+
+      <section>
+        <ExercicioUseState />
       </section>
     </>
   );
